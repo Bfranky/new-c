@@ -89,7 +89,7 @@ export default function PortfolioGallery() {
       : portfolioLooks.filter((look) => look.category === filter);
 
   return (
-    <section id="lookbook" className="py-16 sm:py-24 bg-[#FAF7F2] border-b border-[#E8E1D5]">
+    <section id="lookbook" className="py-16 sm:py-24 bg-[#FAF7F2] border-b border-[#E8E1D5] scroll-mt-28">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">

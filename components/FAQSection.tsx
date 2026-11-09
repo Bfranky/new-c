@@ -30,7 +30,7 @@ export default function FAQSection() {
   ];
 
   return (
-    <section id="faqs" className="py-16 sm:py-24 bg-[#FAF7F2] border-b border-[#E8E1D5]">
+    <section id="faqs" className="py-16 sm:py-24 bg-[#FAF7F2] border-b border-[#E8E1D5] scroll-mt-28">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         <div className="text-center space-y-2 mb-12">
           <span className="text-[10px] uppercase tracking-[0.28em] text-[#C59A3F] font-bold">

@@ -28,7 +28,7 @@ export default function TheStandard() {
   ];
 
   return (
-    <section id="craft" className="py-16 sm:py-20 bg-white border-b border-[#E8E1D5]">
+    <section id="craft" className="py-16 sm:py-20 bg-white border-b border-[#E8E1D5] scroll-mt-28">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center max-w-xl mx-auto mb-12 space-y-2">
           <span className="text-[10px] uppercase tracking-[0.28em] text-[#C59A3F] font-bold">
@@ -51,8 +51,8 @@ export default function TheStandard() {
                 className="p-6 rounded-2xl bg-[#FAF7F2] border border-[#E8E1D5] hover:border-[#C59A3F]/60 transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
-                  <div className="w-10 h-10 rounded-xl bg-white text-[#C59A3F] border border-[#E8E1D5] flex items-center justify-center mb-4 group-hover:bg-[#C59A3F] group-hover:text-white transition-colors duration-300">
-                    <Icon className="w-5 h-5" />
+                  <div className="w-10 h-10 rounded-xl bg-white text-[#C59A3F] border border-[#E8E1D5] flex items-center justify-center mb-4 group-hover:bg-[#C59A3F] group-hover:text-white transition-colors duration-300 shrink-0">
+                    <Icon className="w-5 h-5 shrink-0" />
                   </div>
                   <h3 className="font-serif text-lg font-bold text-[#0D0B0A] mb-2">
                     {item.title}
@@ -69,4 +69,3 @@ export default function TheStandard() {
     </section>
   );
 }
-

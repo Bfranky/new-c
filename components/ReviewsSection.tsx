@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Star, CheckCircle, Heart, Quote } from "lucide-react";
+import { Star, CheckCircle } from "lucide-react";
 
 export default function ReviewsSection() {
   const reviews = [
@@ -32,7 +32,7 @@ export default function ReviewsSection() {
   ];
 
   return (
-    <section id="reviews" className="py-16 sm:py-24 bg-[#FAF7F2] border-b border-[#E8E1D5]">
+    <section id="reviews" className="py-16 sm:py-24 bg-[#FAF7F2] border-b border-[#E8E1D5] scroll-mt-28">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="text-center max-w-xl mx-auto space-y-2 mb-12">
@@ -48,9 +48,9 @@ export default function ReviewsSection() {
 
           <div className="flex items-center justify-center gap-1.5 pt-2">
             {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-4 h-4 fill-[#C59A3F] text-[#C59A3F]" />
+              <Star key={i} className="w-4 h-4 fill-[#C59A3F] text-[#C59A3F] shrink-0" />
             ))}
-            <span className="text-xs font-bold text-[#0D0B0A] ml-1">5.0 / 5.0 Rating</span>
+            <span className="text-xs font-bold text-[#0D0B0A] ml-1.5">5.0 / 5.0 Rating</span>
           </div>
         </div>
 
@@ -62,13 +62,13 @@ export default function ReviewsSection() {
               className="bg-white rounded-2xl p-7 border border-[#E8E1D5] hover:border-[#C59A3F]/50 transition-all duration-300 flex flex-col justify-between shadow-sm"
             >
               <div>
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center justify-between gap-2 mb-4">
                   <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 bg-[#FAF7F2] border border-[#E8E1D5] rounded-full text-[#C59A3F]">
                     {rev.tag}
                   </span>
-                  <div className="flex">
+                  <div className="flex items-center gap-0.5">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3.5 h-3.5 fill-[#C59A3F] text-[#C59A3F]" />
+                      <Star key={i} className="w-3.5 h-3.5 fill-[#C59A3F] text-[#C59A3F] shrink-0" />
                     ))}
                   </div>
                 </div>
@@ -87,7 +87,9 @@ export default function ReviewsSection() {
                     {rev.role}
                   </p>
                 </div>
-                <CheckCircle className="w-4 h-4 text-emerald-600" />
+                <div className="flex items-center gap-1 text-emerald-600">
+                  <CheckCircle className="w-4 h-4 shrink-0" />
+                </div>
               </div>
             </div>
           ))}

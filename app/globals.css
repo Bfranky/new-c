@@ -1,16 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
-:root {
+@theme {
+  --font-serif: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-jakarta), "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+
+  --color-gold: #C59A3F;
+  --color-gold-light: #DFBE74;
+  --color-gold-dark: #9F7524;
   --color-noir: #0D0B0A;
   --color-noir-surface: #141110;
   --color-sand: #FAF7F2;
   --color-sand-muted: #F2ECE1;
   --color-border: #E8E1D5;
-  --color-border-dark: #27221F;
-  --color-gold: #C59A3F;
-  --color-gold-light: #DFBE74;
-  --color-gold-dark: #9F7524;
 }
 
 * {
@@ -26,64 +27,36 @@ html {
 }
 
 body {
-  background-color: var(--color-sand);
-  color: var(--color-noir);
-  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: #FAF7F2;
+  color: #0D0B0A;
+  font-family: var(--font-jakarta), "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
 }
 
 .font-serif {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: var(--font-cormorant), "Cormorant Garamond", Georgia, serif !important;
 }
 
 .font-sans {
-  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-jakarta), "Plus Jakarta Sans", system-ui, -apple-system, sans-serif !important;
 }
 
 /* Custom Sleek Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
-
 ::-webkit-scrollbar-track {
   background: #FAF7F2;
 }
-
 ::-webkit-scrollbar-thumb {
   background: #D8D0C3;
   border-radius: 4px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
   background: #C59A3F;
 }
 
-/* Subtle luxury animations */
-@keyframes floatSoft {
-
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-6px);
-  }
-}
-
-.animate-float {
-  animation: floatSoft 5s ease-in-out infinite;
-}
-
-/* Glassmorphism helpers */
-.glass-luxury {
-  background: rgba(250, 247, 242, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-
-.glass-dark {
-  background: rgba(13, 11, 10, 0.88);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+/* Fix sticky anchor offset so headings are never cut off by sticky navbar */
+section[id] {
+  scroll-margin-top: 120px;
 }

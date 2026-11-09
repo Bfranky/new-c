@@ -134,7 +134,7 @@ export default function ServicesBooking() {
   };
 
   return (
-    <section id="services" className="py-16 sm:py-24 bg-white border-b border-[#E8E1D5]">
+    <section id="services" className="py-16 sm:py-24 bg-white border-b border-[#E8E1D5] scroll-mt-28">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-12">
@@ -160,11 +160,10 @@ export default function ServicesBooking() {
               <button
                 key={tab.id}
                 onClick={() => setActiveCategory(tab.id)}
-                className={`px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
-                  activeCategory === tab.id
-                    ? "bg-[#0D0B0A] text-[#FAF7F2] shadow-sm"
-                    : "bg-[#FAF7F2] text-[#5A534C] border border-[#E8E1D5] hover:border-[#C59A3F]"
-                }`}
+                className={`px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${activeCategory === tab.id
+                  ? "bg-[#0D0B0A] text-[#FAF7F2] shadow-sm"
+                  : "bg-[#FAF7F2] text-[#5A534C] border border-[#E8E1D5] hover:border-[#C59A3F]"
+                  }`}
               >
                 {tab.label}
               </button>
@@ -177,11 +176,10 @@ export default function ServicesBooking() {
           {filteredServices.map((service) => (
             <div
               key={service.id}
-              className={`rounded-2xl p-6 sm:p-7 border transition-all duration-300 flex flex-col justify-between relative bg-[#FAF7F2] ${
-                service.featured
-                  ? "border-[#C59A3F] ring-1 ring-[#C59A3F]/30 shadow-md"
-                  : "border-[#E8E1D5] hover:border-[#C59A3F]/60"
-              }`}
+              className={`rounded-2xl p-6 sm:p-7 border transition-all duration-300 flex flex-col justify-between relative bg-[#FAF7F2] ${service.featured
+                ? "border-[#C59A3F] ring-1 ring-[#C59A3F]/30 shadow-md"
+                : "border-[#E8E1D5] hover:border-[#C59A3F]/60"
+                }`}
             >
               {service.featured && (
                 <div className="absolute -top-3 left-6 bg-[#C59A3F] text-white text-[10px] font-bold px-3 py-0.5 rounded-full uppercase tracking-wider flex items-center gap-1 shadow-sm">
@@ -223,11 +221,10 @@ export default function ServicesBooking() {
 
               <button
                 onClick={() => handleSelectService(service.name)}
-                className={`w-full py-3 rounded-full text-xs font-semibold uppercase tracking-wider transition-all flex items-center justify-center gap-2 cursor-pointer ${
-                  selectedService === service.name
-                    ? "bg-[#C59A3F] text-white shadow-sm"
-                    : "bg-white text-[#0D0B0A] hover:bg-[#0D0B0A] hover:text-white border border-[#E8E1D5]"
-                }`}
+                className={`w-full py-3 rounded-full text-xs font-semibold uppercase tracking-wider transition-all flex items-center justify-center gap-2 cursor-pointer ${selectedService === service.name
+                  ? "bg-[#C59A3F] text-white shadow-sm"
+                  : "bg-white text-[#0D0B0A] hover:bg-[#0D0B0A] hover:text-white border border-[#E8E1D5]"
+                  }`}
               >
                 {selectedService === service.name ? "Selected for Booking" : "Select Look"}
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -282,22 +279,20 @@ export default function ServicesBooking() {
                   <button
                     type="button"
                     onClick={() => setLocationType("In-Studio (Eyita, Ikorodu)")}
-                    className={`px-3 py-3 rounded-xl text-xs font-medium border text-center transition-all cursor-pointer ${
-                      locationType.includes("In-Studio")
-                        ? "bg-[#0D0B0A] text-white border-[#0D0B0A]"
-                        : "bg-white text-[#5A534C] border-[#E8E1D5] hover:border-[#C59A3F]"
-                    }`}
+                    className={`px-3 py-3 rounded-xl text-xs font-medium border text-center transition-all cursor-pointer ${locationType.includes("In-Studio")
+                      ? "bg-[#0D0B0A] text-white border-[#0D0B0A]"
+                      : "bg-white text-[#5A534C] border-[#E8E1D5] hover:border-[#C59A3F]"
+                      }`}
                   >
                     Eyita Studio
                   </button>
                   <button
                     type="button"
                     onClick={() => setLocationType("Home / Hotel Callout Service")}
-                    className={`px-3 py-3 rounded-xl text-xs font-medium border text-center transition-all cursor-pointer ${
-                      locationType.includes("Home")
-                        ? "bg-[#0D0B0A] text-white border-[#0D0B0A]"
-                        : "bg-white text-[#5A534C] border-[#E8E1D5] hover:border-[#C59A3F]"
-                    }`}
+                    className={`px-3 py-3 rounded-xl text-xs font-medium border text-center transition-all cursor-pointer ${locationType.includes("Home")
+                      ? "bg-[#0D0B0A] text-white border-[#0D0B0A]"
+                      : "bg-white text-[#5A534C] border-[#E8E1D5] hover:border-[#C59A3F]"
+                      }`}
                   >
                     Hotel / Callout
                   </button>

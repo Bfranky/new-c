@@ -1,5 +1,20 @@
 import type { Metadata, Viewport } from "next";
+import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-cormorant",
+  display: "swap",
+});
+
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-jakarta",
+  display: "swap",
+});
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -87,14 +102,14 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en">
+    <html lang="en" className={`${cormorant.variable} ${plusJakarta.variable}`}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen bg-[#FAF7F2] text-[#0D0B0A] selection:bg-[#C59A3F] selection:text-white">
+      <body className="min-h-screen bg-[#FAF7F2] text-[#0D0B0A] font-sans selection:bg-[#C59A3F] selection:text-white">
         {children}
       </body>
     </html>

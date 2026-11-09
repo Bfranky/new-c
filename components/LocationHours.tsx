@@ -14,7 +14,7 @@ export default function LocationHours() {
   };
 
   return (
-    <section id="location" className="py-16 sm:py-24 bg-white border-b border-[#E8E1D5]">
+    <section id="location" className="py-16 sm:py-24 bg-white border-b border-[#E8E1D5] scroll-mt-28">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Left Column: Studio & Direction Details */}
@@ -34,7 +34,7 @@ export default function LocationHours() {
             <div className="bg-[#FAF7F2] rounded-2xl p-6 sm:p-7 border border-[#E8E1D5] space-y-5">
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-xl bg-white border border-[#E8E1D5] text-[#C59A3F] flex items-center justify-center shrink-0">
-                  <MapPin className="w-5 h-5" />
+                  <MapPin className="w-5 h-5 shrink-0" />
                 </div>
                 <div className="flex-1">
                   <h3 className="font-serif text-lg font-bold text-[#0D0B0A]">
@@ -47,7 +47,7 @@ export default function LocationHours() {
                     onClick={handleCopy}
                     className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-[#C59A3F] hover:underline mt-2 cursor-pointer"
                   >
-                    {copied ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
+                    {copied ? <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" /> : <Copy className="w-3.5 h-3.5 shrink-0" />}
                     <span>{copied ? "Copied to Clipboard!" : "Copy Address"}</span>
                   </button>
                 </div>
@@ -55,7 +55,7 @@ export default function LocationHours() {
 
               <div className="flex items-start gap-4 pt-4 border-t border-[#E8E1D5]">
                 <div className="w-10 h-10 rounded-xl bg-white border border-[#E8E1D5] text-[#C59A3F] flex items-center justify-center shrink-0">
-                  <Clock className="w-5 h-5" />
+                  <Clock className="w-5 h-5 shrink-0" />
                 </div>
                 <div>
                   <h3 className="font-serif text-lg font-bold text-[#0D0B0A]">
@@ -75,23 +75,23 @@ export default function LocationHours() {
                 href="https://maps.google.com/?q=24+Oguntuga+Street+Eyita+Ikorodu+Lagos"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#0D0B0A] hover:bg-[#C59A3F] text-[#FAF7F2] px-6 py-3 rounded-full text-xs font-semibold uppercase tracking-wider transition-colors"
+                className="inline-flex items-center gap-2 bg-[#0D0B0A] hover:bg-[#C59A3F] text-[#FAF7F2] px-6 py-3 rounded-full text-xs font-semibold uppercase tracking-wider transition-colors shrink-0"
               >
-                <Navigation className="w-3.5 h-3.5 text-[#C59A3F]" />
+                <Navigation className="w-3.5 h-3.5 text-[#C59A3F] shrink-0" />
                 <span>Open in Google Maps</span>
               </a>
 
               <a
                 href="tel:+2348138948285"
-                className="inline-flex items-center gap-2 bg-white hover:bg-[#FAF7F2] text-[#0D0B0A] border border-[#E8E1D5] px-6 py-3 rounded-full text-xs font-semibold uppercase tracking-wider transition-colors"
+                className="inline-flex items-center gap-2 bg-white hover:bg-[#FAF7F2] text-[#0D0B0A] border border-[#E8E1D5] px-6 py-3 rounded-full text-xs font-semibold uppercase tracking-wider transition-colors shrink-0"
               >
-                <Phone className="w-3.5 h-3.5 text-[#C59A3F]" />
+                <Phone className="w-3.5 h-3.5 text-[#C59A3F] shrink-0" />
                 <span>Call Studio: 0813 894 8285</span>
               </a>
             </div>
           </div>
 
-          {/* Right Column: Visual Portrait & Travel Coverage */}
+          {/* Right Column: Travel Coverage */}
           <div className="lg:col-span-5">
             <div className="bg-[#FAF7F2] rounded-3xl p-6 sm:p-8 border border-[#E8E1D5] space-y-6">
               <h3 className="font-serif text-2xl font-bold text-[#0D0B0A]">
@@ -125,9 +125,9 @@ export default function LocationHours() {
                   href="https://wa.me/2348138948285?text=Hello%20Zee!%20I%20would%20like%20to%20inquire%20about%20a%20hotel%20callout%20service."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 bg-white hover:bg-[#0D0B0A] text-[#0D0B0A] hover:text-[#FAF7F2] border border-[#E8E1D5] py-3.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-[#0D0B0A] hover:bg-[#C59A3F] text-[#FAF7F2] py-3.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all shadow-sm"
                 >
-                  <MessageCircle className="w-4 h-4 text-[#C59A3F]" />
+                  <MessageCircle className="w-4 h-4 text-[#C59A3F] shrink-0" />
                   <span>Inquire Callout Travel Fee</span>
                 </a>
               </div>

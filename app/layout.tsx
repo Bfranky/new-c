@@ -5,29 +5,37 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
-  themeColor: "#FAF8F5",
+  themeColor: "#0D0B0A",
 };
 
 export const metadata: Metadata = {
-  title: "Beauté by Zee | Makeup Artist in Ikorodu (5.0 ★)",
+  title: "Beauté by Zee | Luxury Makeup & Gele Stylist in Ikorodu (5.0 ★)",
   description:
-    "Top-rated 5.0-star professional beautician & makeup artist in Eyita, Ikorodu, Lagos. Flawless bridal glam, owambe party looks, photoshoot makeup, gele styling & home service.",
+    "Top-rated 5.0-star professional makeup studio in Eyita, Ikorodu, Lagos. Tailored for rich African complexions: luxury bridal glam, owambe party looks, and couture gele styling.",
   keywords: [
     "makeup artist in ikorodu",
     "beautebyzee",
     "eyita ikorodu makeup studio",
-    "bridal makeup lagos",
+    "black bridal makeup lagos",
     "owambe makeup ikorodu",
     "gele tying ikorodu",
-    "lagos beautician",
+    "lagos luxury beautician",
   ],
   authors: [{ name: "Beauté by Zee" }],
   openGraph: {
-    title: "Beauté by Zee | Makeup Artist in Ikorodu",
+    title: "Beauté by Zee | Luxury Makeup & Gele Stylist in Ikorodu",
     description:
-      "5.0 Rated Makeup Studio in Eyita, Ikorodu. Flawless skin-blend makeup that lasts all day.",
+      "5.0 Rated Makeup Studio in Eyita, Ikorodu. Flawless melanin artistry that melts into your skin and lasts all day.",
     type: "website",
     locale: "en_NG",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1786529743690-93a4547bc26c?q=80&w=1200",
+        width: 1200,
+        height: 630,
+        alt: "Beauté by Zee - Luxury African Bridal Makeup",
+      },
+    ],
   },
 };
 
@@ -40,7 +48,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "BeautySalon",
     "name": "beautebyzee_ Makeup Artist in Ikorodu",
-    "image": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f",
+    "image": "https://images.unsplash.com/photo-1786529743690-93a4547bc26c",
     "telephone": "+2348138948285",
     "address": {
       "@type": "PostalAddress",
@@ -86,7 +94,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen bg-[#FAF8F5] text-[#151311] selection:bg-[#B88947] selection:text-white">
+      <body className="min-h-screen bg-[#FAF7F2] text-[#0D0B0A] selection:bg-[#C59A3F] selection:text-white">
         {children}
       </body>
     </html>

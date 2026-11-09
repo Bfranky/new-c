@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import TrustBar from "@/components/TrustBar";
+import TheStandard from "@/components/TheStandard";
 import ServicesBooking from "@/components/ServicesBooking";
 import PortfolioGallery from "@/components/PortfolioGallery";
 import ReviewsSection from "@/components/ReviewsSection";
@@ -9,21 +9,22 @@ import LocationHours from "@/components/LocationHours";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import StickyMobileBar from "@/components/StickyMobileBar";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#FAF8F5] text-[#151311]">
+    <main className="min-h-screen bg-[#FAF7F2] text-[#0D0B0A] relative">
       <Navbar />
       <Hero />
-      <TrustBar />
-      <ServicesBooking />
+      <TheStandard />
       <PortfolioGallery />
+      <ServicesBooking />
       <ReviewsSection />
       <LocationHours />
       <FAQSection />
       <Footer />
       <FloatingWhatsApp />
+      <StickyMobileBar />
     </main>
   );
 }
-

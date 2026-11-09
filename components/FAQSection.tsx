@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ChevronDown, Sparkles } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -47,22 +47,24 @@ export default function FAQSection() {
             return (
               <div
                 key={idx}
-                className="bg-white rounded-2xl border border-[#E8E1D5] overflow-hidden transition-all duration-300"
+                className="bg-white rounded-2xl border border-[#E8E1D5] overflow-hidden transition-all duration-300 shadow-sm"
               >
                 <button
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
-                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer"
+                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer hover:bg-[#FAF7F2]/50 transition-colors"
                 >
-                  <span className="font-serif text-lg font-bold text-[#0D0B0A]">
+                  <span className="font-serif text-lg sm:text-xl font-bold text-[#0D0B0A]">
                     {faq.q}
                   </span>
                   <div
-                    className={`w-8 h-8 rounded-full bg-[#FAF7F2] border border-[#E8E1D5] flex items-center justify-center shrink-0 transition-transform duration-300 ${
-                      isOpen ? "rotate-180 bg-[#0D0B0A] text-white border-[#0D0B0A]" : "text-[#7A7269]"
+                    className={`w-8 h-8 rounded-full border flex items-center justify-center shrink-0 transition-all duration-300 ${
+                      isOpen
+                        ? "rotate-180 bg-[#C59A3F] text-[#0D0B0A] border-[#C59A3F]"
+                        : "bg-white text-[#0D0B0A] border-[#E8E1D5]"
                     }`}
                   >
-                    <ChevronDown className="w-4 h-4" />
+                    <ChevronDown className="w-4 h-4 shrink-0" />
                   </div>
                 </button>
 

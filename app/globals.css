@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --font-serif: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
-  --font-sans: var(--font-jakarta), "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, Cambria, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
 
   --color-gold: #C59A3F;
   --color-gold-light: #DFBE74;
@@ -29,16 +29,16 @@ html {
 body {
   background-color: #FAF7F2;
   color: #0D0B0A;
-  font-family: var(--font-jakarta), "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
 }
 
 .font-serif {
-  font-family: var(--font-cormorant), "Cormorant Garamond", Georgia, serif !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
 }
 
 .font-sans {
-  font-family: var(--font-jakarta), "Plus Jakarta Sans", system-ui, -apple-system, sans-serif !important;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
 }
 
 /* Custom Sleek Scrollbar */

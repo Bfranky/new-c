@@ -10,10 +10,12 @@ import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import StickyMobileBar from "@/components/StickyMobileBar";
+import ScrollManager from "@/components/ScrollManager";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#FAF7F2] text-[#0D0B0A] relative">
+      <ScrollManager />
       <Navbar />
       <Hero />
       <TheStandard />

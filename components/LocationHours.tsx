@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { MapPin, Clock, Phone, Navigation, Copy, Check, MessageCircle } from "lucide-react";
+import { MapPin, Clock, Phone, Navigation, Copy, Check, MessageCircle, Sparkles } from "lucide-react";
 
 export default function LocationHours() {
   const [copied, setCopied] = useState(false);
@@ -31,7 +31,7 @@ export default function LocationHours() {
               </p>
             </div>
 
-            <div className="bg-[#FAF7F2] rounded-2xl p-6 sm:p-7 border border-[#E8E1D5] space-y-5">
+            <div className="bg-[#FAF7F2] rounded-2xl p-6 sm:p-7 border border-[#E8E1D5] space-y-5 shadow-sm">
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-xl bg-white border border-[#E8E1D5] text-[#C59A3F] flex items-center justify-center shrink-0">
                   <MapPin className="w-5 h-5 shrink-0" />
@@ -91,36 +91,53 @@ export default function LocationHours() {
             </div>
           </div>
 
-          {/* Right Column: Travel Coverage */}
-          <div className="lg:col-span-5">
-            <div className="bg-[#FAF7F2] rounded-3xl p-6 sm:p-8 border border-[#E8E1D5] space-y-6">
-              <h3 className="font-serif text-2xl font-bold text-[#0D0B0A]">
+          {/* Right Column: High-Fashion Visual & Travel Coverage */}
+          <div className="lg:col-span-5 space-y-6">
+            <div className="relative rounded-3xl overflow-hidden aspect-[16/10] bg-[#141110] border border-[#E8E1D5] shadow-lg">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://images.unsplash.com/photo-1785927926340-a81429686417?q=80&w=900&auto=format&fit=crop"
+                alt="Beauté by Zee Studio Glam"
+                className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0D0B0A]/80 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 text-white">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#0D0B0A]/90 backdrop-blur-md rounded-full text-[10px] font-bold uppercase tracking-wider text-[#DFBE74]">
+                  <Sparkles className="w-3 h-3 text-[#C59A3F]" />
+                  Private Eyita Studio & Callout Service
+                </span>
+              </div>
+            </div>
+
+            <div className="bg-[#FAF7F2] rounded-3xl p-6 sm:p-7 border border-[#E8E1D5] space-y-4 shadow-sm">
+              <h3 className="font-serif text-xl font-bold text-[#0D0B0A]">
                 Travel & Callout Coverage
               </h3>
               <p className="text-xs text-[#5A534C] leading-relaxed font-light">
-                Zee travels on-site with a complete mobile vanity kit, ring lighting, and sanitation essentials to your venue or suite:
+                Zee travels on-site with full vanity lighting, makeup kits, and sanitation essentials:
               </p>
 
-              <div className="grid grid-cols-2 gap-3 text-xs text-[#0D0B0A] font-medium">
-                <div className="p-3 bg-white rounded-xl border border-[#E8E1D5]">
+              <div className="grid grid-cols-2 gap-2.5 text-xs text-[#0D0B0A] font-medium">
+                <div className="p-2.5 bg-white rounded-xl border border-[#E8E1D5]">
                   <p className="font-bold text-[#0D0B0A]">Ikorodu Central</p>
-                  <p className="text-[10px] text-[#7A7269]">Eyita, Ibeshe, Agric, Ogijo</p>
+                  <p className="text-[10px] text-[#7A7269]">Eyita, Ibeshe, Agric</p>
                 </div>
-                <div className="p-3 bg-white rounded-xl border border-[#E8E1D5]">
+                <div className="p-2.5 bg-white rounded-xl border border-[#E8E1D5]">
                   <p className="font-bold text-[#0D0B0A]">Lagos Mainland</p>
-                  <p className="text-[10px] text-[#7A7269]">Ikeja, Maryland, Surulere</p>
+                  <p className="text-[10px] text-[#7A7269]">Ikeja, Maryland</p>
                 </div>
-                <div className="p-3 bg-white rounded-xl border border-[#E8E1D5]">
+                <div className="p-2.5 bg-white rounded-xl border border-[#E8E1D5]">
                   <p className="font-bold text-[#0D0B0A]">Lagos Island</p>
                   <p className="text-[10px] text-[#7A7269]">Lekki, VI, Ikoyi</p>
                 </div>
-                <div className="p-3 bg-white rounded-xl border border-[#E8E1D5]">
+                <div className="p-2.5 bg-white rounded-xl border border-[#E8E1D5]">
                   <p className="font-bold text-[#0D0B0A]">Destination</p>
-                  <p className="text-[10px] text-[#7A7269]">Ogun State & Interstate</p>
+                  <p className="text-[10px] text-[#7A7269]">Interstate & Ogun</p>
                 </div>
               </div>
 
-              <div className="pt-2">
+              <div className="pt-1">
                 <a
                   href="https://wa.me/2348138948285?text=Hello%20Zee!%20I%20would%20like%20to%20inquire%20about%20a%20hotel%20callout%20service."
                   target="_blank"

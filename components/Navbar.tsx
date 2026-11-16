@@ -21,83 +21,83 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Editorial Top Announcement Ribbon */}
-      <div className="bg-[#0D0B0A] text-[#FAF7F2] text-[11px] py-2 px-4 border-b border-[#24201D] tracking-wide">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
+      {/* Editorial Top Luxury Bar */}
+      <div className="bg-[#070605] text-[#D8D0C5] text-[11px] py-2 px-4 border-b border-[#241F1A] tracking-wider">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
             <span className="inline-flex items-center gap-1.5 font-medium">
-              <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${isOpenNow ? "bg-emerald-400 animate-pulse" : "bg-[#C59A3F]"}`} />
-              {isOpenNow ? "Eyita Studio Open Now" : "Studio Opens 8:00 AM"}
+              <span className={`w-2 h-2 rounded-full shrink-0 ${isOpenNow ? "bg-emerald-400 animate-pulse shadow-[0_0_8px_#34d399]" : "bg-[#C59A3F]"}`} />
+              <span className="text-[#FAF7F2]">{isOpenNow ? "Eyita Studio Open Now" : "Studio Opens 8:00 AM"}</span>
             </span>
-            <span className="text-[#3A3430] hidden md:inline">•</span>
-            <span className="hidden md:inline-flex items-center gap-1 text-[#C8C0B5]">
+            <span className="text-[#453D35] hidden md:inline">•</span>
+            <span className="hidden md:inline-flex items-center gap-1.5 text-[#B5ABA0]">
               <MapPin className="w-3 h-3 text-[#C59A3F] shrink-0" />
               24 Oguntuga St, Eyita, Ikorodu
             </span>
           </div>
 
-          <div className="flex items-center gap-4 text-[#C8C0B5]">
+          <div className="flex items-center gap-5 text-[#B5ABA0]">
             <a
               href="tel:+2348138948285"
-              className="inline-flex items-center gap-1 hover:text-[#C59A3F] transition-colors"
+              className="inline-flex items-center gap-1.5 hover:text-[#DFC07A] transition-colors"
             >
               <Phone className="w-3 h-3 text-[#C59A3F] shrink-0" />
               <span className="font-semibold text-[#FAF7F2]">0813 894 8285</span>
             </a>
-            <span className="text-[#3A3430] hidden sm:inline">•</span>
-            <span className="hidden sm:inline-flex items-center gap-1 text-[#FAF7F2]">
-              <Star className="w-3 h-3 fill-[#C59A3F] text-[#C59A3F] shrink-0" />
-              <span className="font-semibold">5.0</span>
-              <span className="text-[#8F877E]">(11 Google Reviews)</span>
+            <span className="text-[#453D35] hidden sm:inline">•</span>
+            <span className="hidden sm:inline-flex items-center gap-1.5 text-[#FAF7F2]">
+              <Star className="w-3.5 h-3.5 fill-[#C59A3F] text-[#C59A3F] shrink-0" />
+              <span className="font-bold text-[#DFC07A]">5.0</span>
+              <span className="text-[#8F877E]">(11 Verified Reviews)</span>
             </span>
           </div>
         </div>
       </div>
 
-      {/* Main Luxury Sticky Navigation */}
-      <header className="sticky top-0 z-40 bg-[#FAF7F2]/95 backdrop-blur-md border-b border-[#E8E1D5] transition-all">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-4">
+      {/* Main Sticky Header */}
+      <header className="sticky top-0 z-40 bg-[#0B0908]/90 backdrop-blur-xl border-b border-[#C59A3F]/20 transition-all">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-4">
           {/* Brand Wordmark */}
           <a href="#" className="flex flex-col group shrink-0">
             <div className="flex items-center gap-1.5">
-              <span className="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-[#0D0B0A] group-hover:text-[#C59A3F] transition-colors">
+              <span className="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-[#FAF7F2] group-hover:text-[#DFC07A] transition-colors">
                 beautebyzee_
               </span>
-              <Sparkles className="w-4 h-4 text-[#C59A3F] shrink-0" />
+              <Sparkles className="w-4 h-4 text-[#C59A3F] shrink-0 animate-pulse" />
             </div>
-            <span className="text-[9px] uppercase tracking-[0.28em] text-[#7A7269] font-medium -mt-0.5">
+            <span className="text-[9px] uppercase tracking-[0.3em] text-[#C59A3F] font-semibold -mt-0.5">
               Haute Artistry & Gele • Ikorodu
             </span>
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-7 text-[12px] font-semibold tracking-wider uppercase text-[#4A433D]">
-            <a href="#services" className="hover:text-[#C59A3F] transition-colors">
+          <nav className="hidden lg:flex items-center gap-8 text-[12px] font-semibold tracking-widest uppercase text-[#D8D0C5]">
+            <a href="#services" className="hover:text-[#DFC07A] transition-colors">
               Services
             </a>
-            <a href="#lookbook" className="hover:text-[#C59A3F] transition-colors">
+            <a href="#lookbook" className="hover:text-[#DFC07A] transition-colors">
               Lookbook
             </a>
-            <a href="#craft" className="hover:text-[#C59A3F] transition-colors">
+            <a href="#craft" className="hover:text-[#DFC07A] transition-colors">
               The Standard
             </a>
-            <a href="#reviews" className="hover:text-[#C59A3F] transition-colors">
+            <a href="#reviews" className="hover:text-[#DFC07A] transition-colors">
               Reviews
             </a>
-            <a href="#location" className="hover:text-[#C59A3F] transition-colors">
+            <a href="#location" className="hover:text-[#DFC07A] transition-colors">
               Studio
             </a>
           </nav>
 
-          {/* Right Action: Gold Contrast WhatsApp CTA */}
+          {/* Right Action: Shimmering Gold CTA */}
           <div className="hidden sm:flex items-center gap-3 shrink-0">
             <a
               href="https://wa.me/2348138948285?text=Hello%20Zee!%20I%20would%20like%20to%20inquire%20about%20booking%20a%20makeup%20session."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#C59A3F] hover:bg-[#B3872F] text-[#0D0B0A] font-bold px-5 py-2.5 rounded-full text-xs uppercase tracking-wider transition-all duration-300 shadow-sm shrink-0"
+              className="inline-flex items-center gap-2 btn-gold-glow text-[#0B0908] font-bold px-6 py-2.5 rounded-full text-xs uppercase tracking-wider shrink-0"
             >
-              <MessageCircle className="w-4 h-4 fill-[#0D0B0A] shrink-0" />
+              <MessageCircle className="w-4 h-4 fill-[#0B0908] shrink-0" />
               <span>Book on WhatsApp</span>
             </a>
           </div>
@@ -106,49 +106,49 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-xl text-[#0D0B0A] hover:bg-[#F2ECE1] transition-colors"
+            className="lg:hidden p-2 rounded-xl text-[#FAF7F2] hover:bg-[#191512] transition-colors"
             aria-label="Toggle navigation menu"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6 shrink-0" /> : <Menu className="w-6 h-6 shrink-0" />}
+            {mobileMenuOpen ? <X className="w-6 h-6 shrink-0 text-[#DFC07A]" /> : <Menu className="w-6 h-6 shrink-0" />}
           </button>
         </div>
 
         {/* Mobile Slide Drawer */}
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-[#FAF7F2] border-b border-[#E8E1D5] px-6 py-6 space-y-4 shadow-xl">
-            <div className="flex flex-col space-y-3 text-sm font-semibold tracking-wider uppercase text-[#4A433D]">
+          <div className="lg:hidden bg-[#0F0D0B] border-b border-[#C59A3F]/30 px-6 py-6 space-y-4 shadow-2xl">
+            <div className="flex flex-col space-y-3 text-sm font-semibold tracking-widest uppercase text-[#D8D0C5]">
               <a
                 href="#services"
                 onClick={() => setMobileMenuOpen(false)}
-                className="py-2 border-b border-[#E8E1D5]/60 hover:text-[#C59A3F]"
+                className="py-2.5 border-b border-[#241F1A] hover:text-[#DFC07A]"
               >
                 Services & Pricing
               </a>
               <a
                 href="#lookbook"
                 onClick={() => setMobileMenuOpen(false)}
-                className="py-2 border-b border-[#E8E1D5]/60 hover:text-[#C59A3F]"
+                className="py-2.5 border-b border-[#241F1A] hover:text-[#DFC07A]"
               >
-                Editorial Lookbook
+                Melanin Lookbook
               </a>
               <a
                 href="#craft"
                 onClick={() => setMobileMenuOpen(false)}
-                className="py-2 border-b border-[#E8E1D5]/60 hover:text-[#C59A3F]"
+                className="py-2.5 border-b border-[#241F1A] hover:text-[#DFC07A]"
               >
                 The Zee Standard
               </a>
               <a
                 href="#reviews"
                 onClick={() => setMobileMenuOpen(false)}
-                className="py-2 border-b border-[#E8E1D5]/60 hover:text-[#C59A3F]"
+                className="py-2.5 border-b border-[#241F1A] hover:text-[#DFC07A]"
               >
-                Client Love (5.0 ★)
+                Client Reviews (5.0 ★)
               </a>
               <a
                 href="#location"
                 onClick={() => setMobileMenuOpen(false)}
-                className="py-2 hover:text-[#C59A3F]"
+                className="py-2.5 hover:text-[#DFC07A]"
               >
                 Studio & Callout
               </a>
@@ -160,9 +160,9 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full flex items-center justify-center gap-2 bg-[#C59A3F] text-[#0D0B0A] py-3.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-md"
+                className="w-full flex items-center justify-center gap-2 btn-gold-glow text-[#0B0908] py-3.5 rounded-full text-xs font-bold uppercase tracking-wider"
               >
-                <MessageCircle className="w-4 h-4 fill-[#0D0B0A] shrink-0" />
+                <MessageCircle className="w-4 h-4 fill-[#0B0908] shrink-0" />
                 <span>Chat Directly on WhatsApp</span>
               </a>
             </div>

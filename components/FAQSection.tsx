@@ -30,38 +30,38 @@ export default function FAQSection() {
   ];
 
   return (
-    <section id="faqs" className="py-16 sm:py-24 bg-[#FAF7F2] border-b border-[#E8E1D5] scroll-mt-28">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
-        <div className="text-center space-y-2 mb-12">
-          <span className="text-[10px] uppercase tracking-[0.28em] text-[#C59A3F] font-bold">
+    <section id="faqs" className="py-20 sm:py-28 bg-[#0B0908] border-b border-[#241F1A] scroll-mt-28 relative">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
+        <div className="text-center space-y-3 mb-14">
+          <span className="text-[11px] uppercase tracking-[0.3em] text-[#DFC07A] font-bold">
             Got Questions?
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#0D0B0A]">
+          <h2 className="font-serif text-4xl sm:text-5xl font-bold text-[#FAF7F2]">
             Frequently Asked
           </h2>
         </div>
 
-        <div className="space-y-3">
+        <div className="space-y-4">
           {faqs.map((faq, idx) => {
             const isOpen = openIndex === idx;
             return (
               <div
                 key={idx}
-                className="bg-white rounded-2xl border border-[#E8E1D5] overflow-hidden transition-all duration-300 shadow-sm"
+                className="gold-card rounded-2xl overflow-hidden transition-all duration-300 shadow-md"
               >
                 <button
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
-                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer hover:bg-[#FAF7F2]/50 transition-colors"
+                  className="w-full p-6 sm:p-7 text-left flex items-center justify-between gap-4 cursor-pointer hover:bg-white/5 transition-colors"
                 >
-                  <span className="font-serif text-lg sm:text-xl font-bold text-[#0D0B0A]">
+                  <span className="font-serif text-xl sm:text-2xl font-bold text-[#FAF7F2]">
                     {faq.q}
                   </span>
                   <div
-                    className={`w-8 h-8 rounded-full border flex items-center justify-center shrink-0 transition-all duration-300 ${
+                    className={`w-9 h-9 rounded-full border flex items-center justify-center shrink-0 transition-all duration-300 ${
                       isOpen
-                        ? "rotate-180 bg-[#C59A3F] text-[#0D0B0A] border-[#C59A3F]"
-                        : "bg-white text-[#0D0B0A] border-[#E8E1D5]"
+                        ? "rotate-180 btn-gold-glow text-[#0B0908] border-transparent"
+                        : "bg-[#191512] text-[#DFC07A] border-[#C59A3F]/35"
                     }`}
                   >
                     <ChevronDown className="w-4 h-4 shrink-0" />
@@ -69,7 +69,7 @@ export default function FAQSection() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 pb-6 sm:px-6 text-xs sm:text-sm text-[#5A534C] font-light leading-relaxed border-t border-[#F2ECE1] pt-4">
+                  <div className="px-6 pb-7 sm:px-7 text-xs sm:text-sm text-[#C8C0B5] font-light leading-relaxed border-t border-[#241F1A] pt-5">
                     {faq.a}
                   </div>
                 )}

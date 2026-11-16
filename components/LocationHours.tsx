@@ -14,78 +14,78 @@ export default function LocationHours() {
   };
 
   return (
-    <section id="location" className="py-16 sm:py-24 bg-white border-b border-[#E8E1D5] scroll-mt-28">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+    <section id="location" className="py-20 sm:py-28 bg-[#0E0C0A] border-b border-[#241F1A] scroll-mt-28 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Column: Studio & Direction Details */}
-          <div className="lg:col-span-7 space-y-6">
-            <div className="space-y-2">
-              <span className="text-[10px] uppercase tracking-[0.28em] text-[#C59A3F] font-bold">
+          <div className="lg:col-span-7 space-y-7">
+            <div className="space-y-3">
+              <span className="text-[11px] uppercase tracking-[0.3em] text-[#DFC07A] font-bold">
                 Private Eyita Studio & Callouts
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0D0B0A]">
+              <h2 className="font-serif text-4xl sm:text-5xl font-bold text-[#FAF7F2]">
                 Visit Zee in Ikorodu
               </h2>
-              <p className="text-sm text-[#5A534C] font-light">
+              <p className="text-sm text-[#A8A199] font-light leading-relaxed">
                 Relax in our calm, air-conditioned studio in Eyita, or request an early morning callout to your hotel or home across Lagos.
               </p>
             </div>
 
-            <div className="bg-[#FAF7F2] rounded-2xl p-6 sm:p-7 border border-[#E8E1D5] space-y-5 shadow-sm">
+            <div className="gold-card rounded-3xl p-7 sm:p-8 space-y-6 shadow-xl">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-white border border-[#E8E1D5] text-[#C59A3F] flex items-center justify-center shrink-0">
-                  <MapPin className="w-5 h-5 shrink-0" />
+                <div className="w-12 h-12 rounded-2xl bg-[#241F1A] border border-[#C59A3F]/35 text-[#DFC07A] flex items-center justify-center shrink-0 shadow-inner">
+                  <MapPin className="w-6 h-6 shrink-0" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-serif text-lg font-bold text-[#0D0B0A]">
+                  <h3 className="font-serif text-2xl font-bold text-[#FAF7F2]">
                     Studio Address
                   </h3>
-                  <p className="text-xs text-[#5A534C] mt-0.5">
+                  <p className="text-xs text-[#C8C0B5] mt-1 font-light">
                     {studioAddress}
                   </p>
                   <button
                     onClick={handleCopy}
-                    className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-[#C59A3F] hover:underline mt-2 cursor-pointer"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#DFC07A] hover:underline mt-2.5 cursor-pointer"
                   >
-                    {copied ? <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" /> : <Copy className="w-3.5 h-3.5 shrink-0" />}
+                    {copied ? <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> : <Copy className="w-3.5 h-3.5 shrink-0" />}
                     <span>{copied ? "Copied to Clipboard!" : "Copy Address"}</span>
                   </button>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 pt-4 border-t border-[#E8E1D5]">
-                <div className="w-10 h-10 rounded-xl bg-white border border-[#E8E1D5] text-[#C59A3F] flex items-center justify-center shrink-0">
-                  <Clock className="w-5 h-5 shrink-0" />
+              <div className="flex items-start gap-4 pt-6 border-t border-[#241F1A]">
+                <div className="w-12 h-12 rounded-2xl bg-[#241F1A] border border-[#C59A3F]/35 text-[#DFC07A] flex items-center justify-center shrink-0 shadow-inner">
+                  <Clock className="w-6 h-6 shrink-0" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-lg font-bold text-[#0D0B0A]">
+                  <h3 className="font-serif text-2xl font-bold text-[#FAF7F2]">
                     Studio & Callout Hours
                   </h3>
-                  <p className="text-xs text-[#5A534C] mt-0.5 leading-relaxed">
-                    <strong>Monday – Saturday:</strong> 8:00 AM – 7:00 PM <br />
-                    <strong>Sunday:</strong> VIP Bookings & Weddings Only <br />
-                    <span className="text-[#C59A3F] font-semibold">Sunrise Callouts: Available from 6:00 AM for bridal prep.</span>
+                  <p className="text-xs text-[#C8C0B5] mt-1 leading-relaxed font-light">
+                    <strong className="text-white">Monday – Saturday:</strong> 8:00 AM – 7:00 PM <br />
+                    <strong className="text-white">Sunday:</strong> VIP Bookings & Weddings Only <br />
+                    <span className="text-[#DFC07A] font-semibold">Sunrise Callouts: Available from 6:00 AM for bridal prep.</span>
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="flex flex-wrap items-center gap-3 pt-2">
+            <div className="flex flex-wrap items-center gap-4 pt-2">
               <a
                 href="https://maps.google.com/?q=24+Oguntuga+Street+Eyita+Ikorodu+Lagos"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#0D0B0A] hover:bg-[#C59A3F] text-[#FAF7F2] px-6 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all shadow-md shrink-0"
+                className="inline-flex items-center gap-2.5 btn-gold-glow text-[#0B0908] px-7 py-4 rounded-full text-xs font-bold uppercase tracking-wider shrink-0"
               >
-                <Navigation className="w-4 h-4 text-[#C59A3F] shrink-0" />
+                <Navigation className="w-4 h-4 fill-[#0B0908] shrink-0" />
                 <span>Open in Google Maps</span>
               </a>
 
               <a
                 href="tel:+2348138948285"
-                className="inline-flex items-center gap-2 bg-white hover:bg-[#FAF7F2] text-[#0D0B0A] border border-[#E8E1D5] px-6 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all shadow-sm shrink-0"
+                className="inline-flex items-center gap-2.5 bg-[#171310] hover:bg-[#241F1A] text-[#FAF7F2] border border-[#C59A3F]/40 px-7 py-4 rounded-full text-xs font-bold uppercase tracking-wider transition-all shrink-0"
               >
-                <Phone className="w-4 h-4 text-[#C59A3F] shrink-0" />
+                <Phone className="w-4 h-4 text-[#DFC07A] shrink-0" />
                 <span>Call: 0813 894 8285</span>
               </a>
             </div>
@@ -93,58 +93,58 @@ export default function LocationHours() {
 
           {/* Right Column: High-Fashion Visual & Travel Coverage */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="relative rounded-3xl overflow-hidden aspect-[16/10] bg-[#141110] border border-[#E8E1D5] shadow-lg">
+            <div className="relative rounded-3xl overflow-hidden aspect-[16/11] bg-[#141110] border border-[#C59A3F]/30 shadow-2xl">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="https://images.unsplash.com/photo-1785927926340-a81429686417?q=80&w=900&auto=format&fit=crop"
-                alt="Beauté by Zee Studio Glam"
+                alt="Beauté by Zee Studio Experience"
                 className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0D0B0A]/80 via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 text-white">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#0D0B0A]/90 backdrop-blur-md rounded-full text-[10px] font-bold uppercase tracking-wider text-[#DFBE74]">
-                  <Sparkles className="w-3 h-3 text-[#C59A3F]" />
-                  Private Eyita Studio & Callout Service
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0B0908]/90 via-transparent to-transparent" />
+              <div className="absolute bottom-5 left-5 right-5 text-white">
+                <span className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#0B0908]/90 backdrop-blur-md rounded-full text-[10px] font-bold uppercase tracking-widest text-[#DFC07A] border border-[#C59A3F]/35">
+                  <Sparkles className="w-3.5 h-3.5 text-[#C59A3F] shrink-0" />
+                  Private Eyita Vanity Suite • Lagos Callouts
                 </span>
               </div>
             </div>
 
-            <div className="bg-[#FAF7F2] rounded-3xl p-6 sm:p-7 border border-[#E8E1D5] space-y-4 shadow-sm">
-              <h3 className="font-serif text-xl font-bold text-[#0D0B0A]">
+            <div className="gold-card rounded-3xl p-7 sm:p-8 space-y-5 shadow-xl">
+              <h3 className="font-serif text-2xl font-bold text-[#FAF7F2]">
                 Travel & Callout Coverage
               </h3>
-              <p className="text-xs text-[#5A534C] leading-relaxed font-light">
-                Zee travels on-site with full vanity lighting, makeup kits, and sanitation essentials:
+              <p className="text-xs text-[#A8A199] leading-relaxed font-light">
+                Zee travels on-site with full professional vanity lighting, premium makeup kits, and sanitation essentials:
               </p>
 
-              <div className="grid grid-cols-2 gap-2.5 text-xs text-[#0D0B0A] font-medium">
-                <div className="p-2.5 bg-white rounded-xl border border-[#E8E1D5]">
-                  <p className="font-bold text-[#0D0B0A]">Ikorodu Central</p>
-                  <p className="text-[10px] text-[#7A7269]">Eyita, Ibeshe, Agric</p>
+              <div className="grid grid-cols-2 gap-3 text-xs text-[#FAF7F2] font-medium">
+                <div className="p-3 bg-[#1D1814] rounded-2xl border border-[#C59A3F]/25">
+                  <p className="font-bold text-[#DFC07A]">Ikorodu Central</p>
+                  <p className="text-[10px] text-[#A8A199] mt-0.5">Eyita, Ibeshe, Agric, Ogijo</p>
                 </div>
-                <div className="p-2.5 bg-white rounded-xl border border-[#E8E1D5]">
-                  <p className="font-bold text-[#0D0B0A]">Lagos Mainland</p>
-                  <p className="text-[10px] text-[#7A7269]">Ikeja, Maryland</p>
+                <div className="p-3 bg-[#1D1814] rounded-2xl border border-[#C59A3F]/25">
+                  <p className="font-bold text-[#DFC07A]">Lagos Mainland</p>
+                  <p className="text-[10px] text-[#A8A199] mt-0.5">Ikeja, Maryland, Surulere</p>
                 </div>
-                <div className="p-2.5 bg-white rounded-xl border border-[#E8E1D5]">
-                  <p className="font-bold text-[#0D0B0A]">Lagos Island</p>
-                  <p className="text-[10px] text-[#7A7269]">Lekki, VI, Ikoyi</p>
+                <div className="p-3 bg-[#1D1814] rounded-2xl border border-[#C59A3F]/25">
+                  <p className="font-bold text-[#DFC07A]">Lagos Island</p>
+                  <p className="text-[10px] text-[#A8A199] mt-0.5">Lekki, VI, Ikoyi</p>
                 </div>
-                <div className="p-2.5 bg-white rounded-xl border border-[#E8E1D5]">
-                  <p className="font-bold text-[#0D0B0A]">Destination</p>
-                  <p className="text-[10px] text-[#7A7269]">Interstate & Ogun</p>
+                <div className="p-3 bg-[#1D1814] rounded-2xl border border-[#C59A3F]/25">
+                  <p className="font-bold text-[#DFC07A]">Destination</p>
+                  <p className="text-[10px] text-[#A8A199] mt-0.5">Interstate & Ogun State</p>
                 </div>
               </div>
 
-              <div className="pt-1">
+              <div className="pt-2">
                 <a
                   href="https://wa.me/2348138948285?text=Hello%20Zee!%20I%20would%20like%20to%20inquire%20about%20a%20hotel%20callout%20service."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 bg-[#C59A3F] hover:bg-[#B3872F] text-[#0D0B0A] font-bold py-3.5 rounded-full text-xs uppercase tracking-wider transition-all shadow-md"
+                  className="w-full inline-flex items-center justify-center gap-2 btn-gold-glow text-[#0B0908] font-bold py-3.5 rounded-full text-xs uppercase tracking-wider shadow-lg"
                 >
-                  <MessageCircle className="w-4 h-4 fill-[#0D0B0A] shrink-0" />
+                  <MessageCircle className="w-4 h-4 fill-[#0B0908] shrink-0" />
                   <span>Inquire Callout Travel Fee</span>
                 </a>
               </div>

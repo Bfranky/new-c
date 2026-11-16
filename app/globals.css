@@ -1,14 +1,17 @@
 @import "tailwindcss";
+@source "../components";
+@source "../app";
 
 @theme {
   --font-serif: "Cormorant Garamond", Georgia, Cambria, serif;
   --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
 
   --color-gold: #C59A3F;
-  --color-gold-light: #DFBE74;
+  --color-gold-light: #DFC07A;
   --color-gold-dark: #9F7524;
-  --color-noir: #0D0B0A;
-  --color-noir-surface: #141110;
+  --color-noir: #0B0908;
+  --color-noir-surface: #14110E;
+  --color-noir-card: #191512;
   --color-sand: #FAF7F2;
   --color-sand-muted: #F2ECE1;
   --color-border: #E8E1D5;
@@ -27,8 +30,8 @@ html {
 }
 
 body {
-  background-color: #FAF7F2;
-  color: #0D0B0A;
+  background-color: #0B0908;
+  color: #FAF7F2;
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
 }
@@ -41,15 +44,15 @@ body {
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
 }
 
-/* Custom Sleek Scrollbar */
+/* Custom Sleek Gold Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #FAF7F2;
+  background: #0B0908;
 }
 ::-webkit-scrollbar-thumb {
-  background: #D8D0C3;
+  background: #2D2722;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -58,5 +61,30 @@ body {
 
 /* Fix sticky anchor offset so headings are never cut off by sticky navbar */
 section[id] {
-  scroll-margin-top: 120px;
+  scroll-margin-top: 100px;
+}
+
+/* Luxury button glow */
+.btn-gold-glow {
+  background: linear-gradient(135deg, #DFC07A 0%, #C59A3F 50%, #A37926 100%);
+  box-shadow: 0 4px 20px -2px rgba(197, 154, 63, 0.4);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-gold-glow:hover {
+  box-shadow: 0 6px 28px 0px rgba(223, 192, 122, 0.6);
+  transform: translateY(-2px);
+}
+.btn-gold-glow:active {
+  transform: translateY(0);
+}
+
+/* Luxury card frame with subtle gold border */
+.gold-card {
+  background: rgba(25, 21, 18, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(197, 154, 63, 0.22);
+}
+.gold-card:hover {
+  border-color: rgba(197, 154, 63, 0.5);
 }

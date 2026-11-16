@@ -28,17 +28,17 @@ export default function TheStandard() {
   ];
 
   return (
-    <section id="craft" className="py-16 sm:py-20 bg-white border-b border-[#E8E1D5] scroll-mt-28">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="text-center max-w-xl mx-auto mb-12 space-y-2">
-          <span className="text-[10px] uppercase tracking-[0.28em] text-[#C59A3F] font-bold">
-            Uncompromising Quality
+    <section id="craft" className="py-20 sm:py-24 bg-[#0E0C0A] border-b border-[#241F1A] scroll-mt-28 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+        <div className="text-center max-w-xl mx-auto mb-14 space-y-2.5">
+          <span className="text-[11px] uppercase tracking-[0.3em] text-[#DFC07A] font-bold">
+            Uncompromising Artistry
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#0D0B0A]">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#FAF7F2]">
             The Zee Standard
           </h2>
-          <p className="text-sm text-[#5A534C] font-light">
-            Luxury artistry tailored to celebrate and empower bold Black women.
+          <p className="text-sm text-[#A8A199] font-light leading-relaxed">
+            Every appointment is tailored to celebrate, elevate, and empower bold African queens.
           </p>
         </div>
 
@@ -48,16 +48,16 @@ export default function TheStandard() {
             return (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-[#FAF7F2] border border-[#E8E1D5] hover:border-[#C59A3F]/60 transition-all duration-300 flex flex-col justify-between group"
+                className="gold-card p-7 rounded-3xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1.5 shadow-lg"
               >
                 <div>
-                  <div className="w-10 h-10 rounded-xl bg-white text-[#C59A3F] border border-[#E8E1D5] flex items-center justify-center mb-4 group-hover:bg-[#C59A3F] group-hover:text-white transition-colors duration-300 shrink-0">
-                    <Icon className="w-5 h-5 shrink-0" />
+                  <div className="w-12 h-12 rounded-2xl bg-[#241F1A] text-[#DFC07A] border border-[#C59A3F]/30 flex items-center justify-center mb-6 group-hover:bg-[#C59A3F] group-hover:text-[#0B0908] transition-all duration-300 shrink-0 shadow-inner">
+                    <Icon className="w-6 h-6 shrink-0" />
                   </div>
-                  <h3 className="font-serif text-lg font-bold text-[#0D0B0A] mb-2">
+                  <h3 className="font-serif text-xl font-bold text-[#FAF7F2] mb-3 group-hover:text-[#DFC07A] transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-xs text-[#5A534C] leading-relaxed">
+                  <p className="text-xs text-[#B5ABA0] leading-relaxed font-light">
                     {item.description}
                   </p>
                 </div>

@@ -36,7 +36,7 @@ export default function ReviewsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         {/* Header */}
         <div className="text-center max-w-xl mx-auto space-y-3 mb-14">
-          <span className="text-[11px] uppercase tracking-[0.3em] text-[#DFC07A] font-bold">
+          <span className="text-2xs uppercase tracking-ultra text-[#DFC07A] font-bold">
             100% 5-Star Reputation
           </span>
           <h2 className="font-serif text-4xl sm:text-5xl font-bold text-[#FAF7F2]">
@@ -65,7 +65,7 @@ export default function ReviewsSection() {
             >
               <div>
                 <div className="flex items-center justify-between gap-2 mb-5">
-                  <span className="text-[10px] font-bold uppercase tracking-wider px-3 py-1 bg-[#241F1A] border border-[#C59A3F]/30 rounded-full text-[#DFC07A]">
+                  <span className="text-3xs font-bold uppercase tracking-wider px-3 py-1 bg-[#241F1A] border border-[#C59A3F]/30 rounded-full text-[#DFC07A]">
                     {rev.tag}
                   </span>
                   <div className="flex items-center gap-1">
@@ -89,7 +89,7 @@ export default function ReviewsSection() {
                     {rev.role}
                   </p>
                 </div>
-                <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950/60 border border-emerald-500/30 text-emerald-400 text-[10px] font-bold uppercase tracking-wider shrink-0">
+                <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950/60 border border-emerald-500/30 text-emerald-400 text-3xs font-bold uppercase tracking-wider shrink-0">
                   <CheckCircle className="w-3.5 h-3.5 shrink-0" />
                   <span>Google Verified</span>
                 </div>

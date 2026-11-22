@@ -20,7 +20,7 @@ export default function Footer() {
               Haute beauty & gele artistry tailored to celebrate bold African queens. Based in Eyita, Ikorodu with studio appointments and nationwide luxury callouts.
             </p>
             <div className="flex items-center gap-2 pt-2">
-              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#171310] border border-[#C59A3F]/30 text-[10px] uppercase tracking-wider text-[#DFC07A] font-bold">
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#171310] border border-[#C59A3F]/30 text-3xs uppercase tracking-wider text-[#DFC07A] font-bold">
                 <Heart className="w-3 h-3 fill-[#DFC07A] shrink-0" />
                 Women-Owned Studio • 5.0 Google Rated
               </span>
@@ -29,7 +29,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="md:col-span-3 space-y-3">
-            <h4 className="text-xs uppercase tracking-[0.25em] text-[#DFC07A] font-bold">
+            <h4 className="text-xs uppercase tracking-ultra text-[#DFC07A] font-bold">
               Navigation
             </h4>
             <ul className="space-y-2.5 text-xs text-[#C8C0B5]">
@@ -63,7 +63,7 @@ export default function Footer() {
 
           {/* Contact Details */}
           <div className="md:col-span-4 space-y-3">
-            <h4 className="text-xs uppercase tracking-[0.25em] text-[#DFC07A] font-bold">
+            <h4 className="text-xs uppercase tracking-ultra text-[#DFC07A] font-bold">
               Direct Contact
             </h4>
             <div className="space-y-3 text-xs text-[#C8C0B5]">
@@ -93,9 +93,9 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-7 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-[#7A7269]">
+        <div className="pt-7 flex flex-col sm:flex-row items-center justify-between gap-4 text-2xs text-[#7A7269]">
           <p>© {new Date().getFullYear()} Beauté by Zee. All rights reserved.</p>
-          <p className="tracking-widest uppercase text-[#DFC07A] font-semibold text-[10px]">
+          <p className="tracking-widest uppercase text-[#DFC07A] font-semibold text-3xs">
             Crafted for Extraordinary Queens
           </p>
         </div>

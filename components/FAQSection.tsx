@@ -33,7 +33,7 @@ export default function FAQSection() {
     <section id="faqs" className="py-20 sm:py-28 bg-[#0B0908] border-b border-[#241F1A] scroll-mt-28 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
         <div className="text-center space-y-3 mb-14">
-          <span className="text-[11px] uppercase tracking-[0.3em] text-[#DFC07A] font-bold">
+          <span className="text-2xs uppercase tracking-ultra text-[#DFC07A] font-bold">
             Got Questions?
           </span>
           <h2 className="font-serif text-4xl sm:text-5xl font-bold text-[#FAF7F2]">

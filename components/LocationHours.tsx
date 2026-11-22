@@ -20,7 +20,7 @@ export default function LocationHours() {
           {/* Left Column: Studio & Direction Details */}
           <div className="lg:col-span-7 space-y-7">
             <div className="space-y-3">
-              <span className="text-[11px] uppercase tracking-[0.3em] text-[#DFC07A] font-bold">
+              <span className="text-2xs uppercase tracking-ultra text-[#DFC07A] font-bold">
                 Private Eyita Studio & Callouts
               </span>
               <h2 className="font-serif text-4xl sm:text-5xl font-bold text-[#FAF7F2]">
@@ -70,12 +70,12 @@ export default function LocationHours() {
               </div>
             </div>
 
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2 w-full sm:w-auto">
               <a
                 href="https://maps.google.com/?q=24+Oguntuga+Street+Eyita+Ikorodu+Lagos"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 btn-gold-glow text-[#0B0908] px-7 py-4 rounded-full text-xs font-bold uppercase tracking-wider shrink-0"
+                className="btn-luxury-primary w-full sm:w-auto"
               >
                 <Navigation className="w-4 h-4 fill-[#0B0908] shrink-0" />
                 <span>Open in Google Maps</span>
@@ -83,7 +83,7 @@ export default function LocationHours() {
 
               <a
                 href="tel:+2348138948285"
-                className="inline-flex items-center gap-2.5 bg-[#171310] hover:bg-[#241F1A] text-[#FAF7F2] border border-[#C59A3F]/40 px-7 py-4 rounded-full text-xs font-bold uppercase tracking-wider transition-all shrink-0"
+                className="btn-luxury-secondary w-full sm:w-auto"
               >
                 <Phone className="w-4 h-4 text-[#DFC07A] shrink-0" />
                 <span>Call: 0813 894 8285</span>
@@ -103,7 +103,7 @@ export default function LocationHours() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0B0908]/90 via-transparent to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 text-white">
-                <span className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#0B0908]/90 backdrop-blur-md rounded-full text-[10px] font-bold uppercase tracking-widest text-[#DFC07A] border border-[#C59A3F]/35">
+                <span className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#0B0908]/90 backdrop-blur-md rounded-full text-3xs font-bold uppercase tracking-widest text-[#DFC07A] border border-[#C59A3F]/35">
                   <Sparkles className="w-3.5 h-3.5 text-[#C59A3F] shrink-0" />
                   Private Eyita Vanity Suite • Lagos Callouts
                 </span>
@@ -121,19 +121,19 @@ export default function LocationHours() {
               <div className="grid grid-cols-2 gap-3 text-xs text-[#FAF7F2] font-medium">
                 <div className="p-3 bg-[#1D1814] rounded-2xl border border-[#C59A3F]/25">
                   <p className="font-bold text-[#DFC07A]">Ikorodu Central</p>
-                  <p className="text-[10px] text-[#A8A199] mt-0.5">Eyita, Ibeshe, Agric, Ogijo</p>
+                  <p className="text-3xs text-[#A8A199] mt-0.5">Eyita, Ibeshe, Agric, Ogijo</p>
                 </div>
                 <div className="p-3 bg-[#1D1814] rounded-2xl border border-[#C59A3F]/25">
                   <p className="font-bold text-[#DFC07A]">Lagos Mainland</p>
-                  <p className="text-[10px] text-[#A8A199] mt-0.5">Ikeja, Maryland, Surulere</p>
+                  <p className="text-3xs text-[#A8A199] mt-0.5">Ikeja, Maryland, Surulere</p>
                 </div>
                 <div className="p-3 bg-[#1D1814] rounded-2xl border border-[#C59A3F]/25">
                   <p className="font-bold text-[#DFC07A]">Lagos Island</p>
-                  <p className="text-[10px] text-[#A8A199] mt-0.5">Lekki, VI, Ikoyi</p>
+                  <p className="text-3xs text-[#A8A199] mt-0.5">Lekki, VI, Ikoyi</p>
                 </div>
                 <div className="p-3 bg-[#1D1814] rounded-2xl border border-[#C59A3F]/25">
                   <p className="font-bold text-[#DFC07A]">Destination</p>
-                  <p className="text-[10px] text-[#A8A199] mt-0.5">Interstate & Ogun State</p>
+                  <p className="text-3xs text-[#A8A199] mt-0.5">Interstate & Ogun State</p>
                 </div>
               </div>
 
@@ -142,7 +142,7 @@ export default function LocationHours() {
                   href="https://wa.me/2348138948285?text=Hello%20Zee!%20I%20would%20like%20to%20inquire%20about%20a%20hotel%20callout%20service."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 btn-gold-glow text-[#0B0908] font-bold py-3.5 rounded-full text-xs uppercase tracking-wider shadow-lg"
+                  className="btn-luxury-primary w-full"
                 >
                   <MessageCircle className="w-4 h-4 fill-[#0B0908] shrink-0" />
                   <span>Inquire Callout Travel Fee</span>

@@ -14,7 +14,7 @@ import ScrollManager from "@/components/ScrollManager";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#FAF7F2] text-[#0D0B0A] relative">
+    <main className="min-h-screen bg-[#0B0908] text-[#FAF7F2] relative">
       <ScrollManager />
       <Navbar />
       <Hero />

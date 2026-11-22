@@ -94,7 +94,7 @@ export default function PortfolioGallery() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
           <div className="space-y-3 max-w-xl">
-            <span className="text-[11px] uppercase tracking-[0.3em] text-[#DFC07A] font-bold">
+            <span className="text-2xs uppercase tracking-ultra text-[#DFC07A] font-bold">
               The Melanin Lookbook
             </span>
             <h2 className="font-serif text-4xl sm:text-5xl font-bold text-[#FAF7F2]">
@@ -150,7 +150,7 @@ export default function PortfolioGallery() {
 
                 {/* Top Badge */}
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-[#141110]/90 backdrop-blur-md text-[#DFC07A] text-[10px] font-bold uppercase tracking-wider rounded-full border border-[#C59A3F]/35 shadow-md">
+                  <span className="px-3 py-1 bg-[#141110]/90 backdrop-blur-md text-[#DFC07A] text-3xs font-bold uppercase tracking-wider rounded-full border border-[#C59A3F]/35 shadow-md">
                     {item.tag}
                   </span>
                 </div>
@@ -166,7 +166,7 @@ export default function PortfolioGallery() {
                     {item.title}
                   </h3>
                   <div className="flex items-center justify-between mt-2 pt-2 border-t border-white/10">
-                    <span className="text-[11px] text-[#A8A199] line-clamp-1 font-light">
+                    <span className="text-2xs text-[#A8A199] line-clamp-1 font-light">
                       {item.desc}
                     </span>
                     <ArrowUpRight className="w-4 h-4 text-[#DFC07A] shrink-0 ml-1 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -202,7 +202,7 @@ export default function PortfolioGallery() {
 
                 <div className="p-7 sm:p-8 flex flex-col justify-between">
                   <div className="space-y-4">
-                    <span className="inline-block px-3 py-1 bg-[#1F1A16] border border-[#C59A3F]/35 text-[#DFC07A] text-[10px] font-bold uppercase tracking-wider rounded-full">
+                    <span className="inline-block px-3 py-1 bg-[#1F1A16] border border-[#C59A3F]/35 text-[#DFC07A] text-3xs font-bold uppercase tracking-wider rounded-full">
                       {activeModalLook.tag}
                     </span>
                     <h3 className="font-serif text-2xl font-bold text-[#FAF7F2]">
@@ -230,7 +230,7 @@ export default function PortfolioGallery() {
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full inline-flex items-center justify-center gap-2 btn-gold-glow text-[#0B0908] font-bold py-3.5 px-6 rounded-full text-xs uppercase tracking-wider shadow-lg"
+                      className="btn-luxury-primary w-full"
                     >
                       <MessageCircle className="w-4 h-4 fill-[#0B0908] shrink-0" />
                       <span>Request This Look on WhatsApp</span>

@@ -31,7 +31,7 @@ export default function TheStandard() {
     <section id="craft" className="py-20 sm:py-24 bg-[#0E0C0A] border-b border-[#241F1A] scroll-mt-28 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         <div className="text-center max-w-xl mx-auto mb-14 space-y-2.5">
-          <span className="text-[11px] uppercase tracking-[0.3em] text-[#DFC07A] font-bold">
+          <span className="text-2xs uppercase tracking-ultra text-[#DFC07A] font-bold">
             Uncompromising Artistry
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#FAF7F2]">

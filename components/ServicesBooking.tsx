@@ -138,7 +138,7 @@ export default function ServicesBooking() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-14">
-          <span className="text-[11px] uppercase tracking-[0.3em] text-[#DFC07A] font-bold">
+          <span className="text-2xs uppercase tracking-ultra text-[#DFC07A] font-bold">
             Transparent Luxury Pricing
           </span>
           <h2 className="font-serif text-4xl sm:text-5xl font-bold text-[#FAF7F2]">
@@ -201,7 +201,7 @@ export default function ServicesBooking() {
                   <span className="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-[#DFC07A] to-[#C59A3F]">
                     {service.price}
                   </span>
-                  <span className="text-[11px] text-[#A8A199] flex items-center gap-1.5 bg-[#191512] px-3 py-1 rounded-full border border-[#C59A3F]/25">
+                  <span className="text-2xs text-[#A8A199] flex items-center gap-1.5 bg-[#191512] px-3 py-1 rounded-full border border-[#C59A3F]/25">
                     <Clock className="w-3 h-3 text-[#DFC07A] shrink-0" />
                     {service.duration}
                   </span>
@@ -242,7 +242,7 @@ export default function ServicesBooking() {
           className="gold-card rounded-3xl p-7 sm:p-12 shadow-2xl scroll-mt-24 max-w-3xl mx-auto"
         >
           <div className="text-center mb-8 space-y-2">
-            <span className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.25em] text-[#DFC07A] font-bold">
+            <span className="inline-flex items-center gap-1.5 text-2xs uppercase tracking-ultra text-[#DFC07A] font-bold">
               <Sparkles className="w-3.5 h-3.5 text-[#C59A3F] shrink-0" />
               Direct WhatsApp Reservation
             </span>
@@ -364,7 +364,7 @@ export default function ServicesBooking() {
                 href={getWhatsAppBookingLink()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex-1 inline-flex items-center justify-center gap-2.5 btn-gold-glow text-[#0B0908] py-4 px-8 rounded-full font-bold text-xs uppercase tracking-widest shadow-xl shrink-0"
+                className="btn-luxury-primary w-full flex-1"
               >
                 <MessageCircle className="w-4 h-4 fill-[#0B0908] shrink-0" />
                 <span>Book on WhatsApp (0813 894 8285)</span>
@@ -372,9 +372,9 @@ export default function ServicesBooking() {
 
               <a
                 href="tel:+2348138948285"
-                className="inline-flex items-center gap-2 text-xs font-bold text-[#DFC07A] hover:text-white px-5 py-3 transition-colors shrink-0"
+                className="btn-luxury-secondary w-full sm:w-auto"
               >
-                <Phone className="w-3.5 h-3.5 text-[#C59A3F] shrink-0" />
+                <Phone className="w-3.5 h-3.5 text-[#DFC07A] shrink-0" />
                 <span>Call Studio</span>
               </a>
             </div>

@@ -9,17 +9,10 @@
   --color-gold: #E2B857;
   --color-gold-dark: #B88B35;
   --color-gold-light: #F3D78E;
-  --color-noir: #090807;
-  --color-noir-surface: #12100E;
-  --color-noir-card: #181512;
-  --color-sand: #FAF7F2;
-  --color-border: #28221B;
 }
 
 *, *::before, *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 html, body {
@@ -131,7 +124,7 @@ section[id] {
   padding: 0.625rem 1.5rem;
   background: linear-gradient(to right, #B88B35, #E2B857);
   color: #09090b !important;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.8125rem;
   letter-spacing: 0.025em;
   border-radius: 9999px;
@@ -161,9 +154,7 @@ section[id] {
 
 /* Standardized Luxury Card */
 .palm-card {
-  background: rgba(18, 16, 14, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(18, 16, 14, 0.6);
   border: 1px solid #28221B;
   border-radius: 1.25rem;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);

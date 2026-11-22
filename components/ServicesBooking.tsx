@@ -1,33 +1,29 @@
 "use client";
 
 import React, { useState } from "react";
-import { Check, Sparkles, Clock } from "lucide-react";
+import { Sparkles, Clock, ArrowRight } from "lucide-react";
 
-interface ServiceItem {
+export interface ServiceItem {
   id: string;
   name: string;
   category: "bridal" | "owambe" | "soft" | "gele";
   price: string;
   duration: string;
+  badge?: string;
   tagline: string;
-  highlights: string[];
-  featured?: boolean;
+  image: string;
 }
 
-const serviceCatalog: ServiceItem[] = [
+export const serviceCatalog: ServiceItem[] = [
   {
     id: "luxury-bridal",
     name: "Luxury Royal Bridal Glam",
     category: "bridal",
     price: "From ₦70,000",
     duration: "2.5 – 3 Hours",
+    badge: "BRIDE FAVORITE",
     tagline: "Our signature royal bridal transformation. Engineered to look immaculate under 4K lenses, bright flashes, and endure all-day heat.",
-    featured: true,
-    highlights: [
-      "Custom skin hydration & waterproof foundation blend",
-      "Traditional or contemporary gele pleating included",
-      "Emergency touch-up kit & premium mink lashes",
-    ],
+    image: "https://images.unsplash.com/photo-1632948056627-41482f69c38c?q=80&w=800&auto=format&fit=crop",
   },
   {
     id: "owambe-radiance",
@@ -35,12 +31,9 @@ const serviceCatalog: ServiceItem[] = [
     category: "owambe",
     price: "₦25,000",
     duration: "1.5 Hours",
+    badge: "PARTY ESSENTIAL",
     tagline: "Head-turning event glam with high-definition brows, sculpted cheekbones, and sweat-resistant velvet skin.",
-    highlights: [
-      "Contoured cheekbones & radiant collarbone glow",
-      "Cut-crease or smokey eye with gold foil pigments",
-      "Transfer-proof 18-hour setting spray lock",
-    ],
+    image: "https://images.unsplash.com/photo-1773848419719-eff31fedbe82?q=80&w=800&auto=format&fit=crop",
   },
   {
     id: "studio-soft",
@@ -48,12 +41,9 @@ const serviceCatalog: ServiceItem[] = [
     category: "soft",
     price: "₦20,000",
     duration: "1 Hour 15 Mins",
+    badge: "STUDIO SPECIAL",
     tagline: "Skin-first minimalist glam for birthday photoshoots, graduation portraits, and romantic evening dinners.",
-    highlights: [
-      "Dewy glass-skin or soft velvet skin finish",
-      "Feathered brows with ombre glossy brown lips",
-      "Zero flashback under photography lighting",
-    ],
+    image: "https://images.unsplash.com/photo-1632765866070-3fadf25d3d5b?q=80&w=800&auto=format&fit=crop",
   },
   {
     id: "couture-gele",
@@ -61,12 +51,9 @@ const serviceCatalog: ServiceItem[] = [
     category: "gele",
     price: "₦8,000",
     duration: "45 Mins",
-    tagline: "Sharp, architectural pleating for aso-oke, sego, or auto-gele fixing with comfortable temple framing.",
-    highlights: [
-      "Traditional fan pleats or modern avant-garde styles",
-      "Sturdy structure that won't loosen or drop",
-      "Gentle fit with zero temple tension",
-    ],
+    badge: "ARTISANAL GELE",
+    tagline: "Sharp, architectural pleating for aso-oke, sego, or auto-gele fixing with comfortable, gentle temple framing.",
+    image: "https://images.unsplash.com/photo-1785927926340-a81429686417?q=80&w=800&auto=format&fit=crop",
   },
   {
     id: "bridal-squad",
@@ -74,12 +61,9 @@ const serviceCatalog: ServiceItem[] = [
     category: "bridal",
     price: "Custom Group Rate",
     duration: "Group Booking",
-    tagline: "Harmonious, camera-ready glam for bridesmaids, mother of the bride, and sisters with coordinated timing.",
-    highlights: [
-      "Uniform elegance tailored to wedding palette",
-      "Discounted group pricing for 3+ clients",
-      "Dedicated on-site schedule management",
-    ],
+    badge: "SQUAD PACKAGE",
+    tagline: "Harmonious, camera-ready glam for bridesmaids, mother of the bride, and sisters with coordinated scheduling.",
+    image: "https://images.unsplash.com/photo-1785088601842-f60c16c7a3b8?q=80&w=800&auto=format&fit=crop",
   },
   {
     id: "callout-service",
@@ -87,67 +71,54 @@ const serviceCatalog: ServiceItem[] = [
     category: "soft",
     price: "Service + Travel Fee",
     duration: "VIP On-Location",
+    badge: "VIP CALLOUT",
     tagline: "Enjoy full luxury artistry in your home, hotel, or bridal suite anywhere in Ikorodu or across Lagos.",
-    highlights: [
-      "Zee arrives with studio lighting & professional chair",
-      "Punctual sunrise arrival (from 6:00 AM)",
-      "Available across Ikorodu, Ikeja, Lekki & Mainland",
-    ],
+    image: "https://images.unsplash.com/photo-1632948056627-41482f69c38c?q=80&w=800&auto=format&fit=crop",
   },
 ];
 
-export default function ServicesBooking() {
+interface ServicesProps {
+  onSelectService?: (serviceName: string) => void;
+}
+
+export default function ServicesBooking({ onSelectService }: ServicesProps) {
   const [activeCategory, setActiveCategory] = useState<string>("all");
-  const [selectedService, setSelectedService] = useState<string>("Luxury Royal Bridal Glam");
-  const [locationType, setLocationType] = useState<string>("In-Studio (Eyita, Ikorodu)");
-  const [date, setDate] = useState<string>("");
-  const [timeSlot, setTimeSlot] = useState<string>("Morning (8:00 AM - 11:00 AM)");
-  const [clientName, setClientName] = useState<string>("");
 
   const filteredServices =
     activeCategory === "all"
       ? serviceCatalog
       : serviceCatalog.filter((s) => s.category === activeCategory);
 
-  const handleSelectService = (name: string) => {
-    setSelectedService(name);
-    const element = document.getElementById("booking");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+  const handleSelect = (name: string) => {
+    if (onSelectService) {
+      onSelectService(name);
+    }
+    const resEl = document.getElementById("reservation");
+    if (resEl) {
+      resEl.scrollIntoView({ behavior: "smooth" });
     }
   };
 
-  const getWhatsAppBookingLink = () => {
-    const text = [
-      `Hello Zee! I would like to book an appointment:`,
-      `• Look: ${selectedService}`,
-      `• Location: ${locationType}`,
-      date ? `• Preferred Date: ${date}` : `• Date: (To discuss)`,
-      `• Time: ${timeSlot}`,
-      clientName ? `• My Name: ${clientName}` : ``,
-      `Could you please confirm availability? Thank you!`,
-    ]
-      .filter(Boolean)
-      .join("\n");
-
-    return `https://wa.me/2348138948285?text=${encodeURIComponent(text)}`;
-  };
-
   return (
-    <section id="services" className="py-20 md:py-28 bg-[#090807] border-b border-[#221c17] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-        {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="gold-tag">Transparent Luxury Pricing</span>
-          <h2 className="font-serif text-3xl md:text-5xl font-bold tracking-tight text-white mb-3">
-            Curated Services &amp; Glam Menu
+    <section id="services" className="py-24 md:py-32 bg-[#090807] border-b border-[#221c17] relative">
+      {/* Subtle ambient lighting */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#E2B857]/5 rounded-full blur-[140px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+        {/* Section Header (Palm Spring Standard) */}
+        <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
+          <span className="gold-tag">
+            HAUTE GLAM MENU
+          </span>
+          <h2 className="font-serif text-3xl md:text-5xl font-bold tracking-tight text-white mb-4">
+            Curated Services &amp; Pricing
           </h2>
-          <p className="text-zinc-400 text-base leading-relaxed font-light">
+          <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light">
             Every appointment begins with personalized skin hydration and concludes with our signature 18-hour Lagos-proof lock.
           </p>
 
-          {/* Filter Pills (Palm Spring Standard) */}
-          <div className="flex flex-wrap justify-center gap-2 pt-6">
+          {/* Filter Pills */}
+          <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 pt-6">
             {[
               { id: "all", label: "All Services" },
               { id: "bridal", label: "Bridal" },
@@ -157,11 +128,12 @@ export default function ServicesBooking() {
             ].map((tab) => (
               <button
                 key={tab.id}
+                type="button"
                 onClick={() => setActiveCategory(tab.id)}
-                className={`px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 cursor-pointer ${
+                className={`px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 cursor-pointer border ${
                   activeCategory === tab.id
-                    ? "bg-gradient-to-r from-[#B88B35] to-[#E2B857] text-zinc-950 shadow-md font-bold"
-                    : "bg-zinc-900 text-zinc-400 hover:text-white border border-zinc-800 hover:border-[#E2B857]/40"
+                    ? "bg-gradient-to-r from-[#B88B35] to-[#E2B857] text-zinc-950 border-[#E2B857] font-bold shadow-md"
+                    : "bg-zinc-900/50 hover:bg-zinc-900 text-zinc-400 hover:text-white border-zinc-800"
                 }`}
               >
                 {tab.label}
@@ -170,210 +142,68 @@ export default function ServicesBooking() {
           </div>
         </div>
 
-        {/* Services Grid (Palm Spring Food Card Architecture) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+        {/* 3-Column Services Grid (Exact Palm Spring Food Card Standard) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service) => (
             <div
               key={service.id}
-              className={`palm-card p-7 sm:p-8 flex flex-col justify-between relative group ${
-                selectedService === service.name
-                  ? "border-[#E2B857] shadow-[0_0_25px_rgba(226,184,87,0.15)]"
-                  : ""
-              }`}
+              className="group bg-zinc-900/40 border border-zinc-900 rounded-2xl overflow-hidden hover:border-zinc-800 hover:bg-zinc-900/60 transition-all duration-300 flex flex-col h-full hover:shadow-[0_4px_30px_rgba(0,0,0,0.5)]"
             >
-              {service.featured && (
-                <div className="absolute -top-3 left-6 px-3 py-1 bg-gradient-to-r from-[#B88B35] to-[#E2B857] text-zinc-950 text-[10px] font-bold rounded-full uppercase tracking-wider shadow-md flex items-center gap-1.5">
-                  <Sparkles className="w-3 h-3" />
-                  Client Favorite
-                </div>
-              )}
+              {/* Card Image Header with Gold Badge */}
+              <div className="relative h-56 w-full overflow-hidden bg-zinc-950 flex items-center justify-center">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={service.image}
+                  alt={service.name}
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent" />
 
-              <div>
-                {/* Title & Price Header */}
-                <div className="flex items-start justify-between gap-3 mb-2">
-                  <h3 className="font-serif text-xl sm:text-2xl font-bold text-white group-hover:text-[#E2B857] transition-colors">
-                    {service.name}
-                  </h3>
+                {service.badge && (
+                  <div className="absolute top-4 left-4 bg-gradient-to-r from-[#B88B35] to-[#E2B857] text-zinc-950 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
+                    <Sparkles className="w-3 h-3" />
+                    {service.badge}
+                  </div>
+                )}
+              </div>
+
+              {/* Card Content Area */}
+              <div className="p-6 md:p-7 flex flex-col flex-1 justify-between">
+                <div>
+                  <div className="flex items-start justify-between gap-4 mb-2">
+                    <h3 className="font-serif text-lg md:text-xl font-bold text-white group-hover:text-[#E2B857] transition-colors duration-300">
+                      {service.name}
+                    </h3>
+                    <span className="font-serif text-[#E2B857] font-bold text-lg whitespace-nowrap">
+                      {service.price}
+                    </span>
+                  </div>
+
+                  <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
+                    {service.tagline}
+                  </p>
                 </div>
 
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="font-serif text-xl font-bold text-[#E2B857]">
-                    {service.price}
-                  </span>
-                  <span className="text-xs text-zinc-400 flex items-center gap-1.5 bg-zinc-900 px-3 py-1 rounded-full border border-zinc-800">
-                    <Clock className="w-3 h-3 text-[#E2B857]" />
+                {/* Bottom Row */}
+                <div className="pt-4 border-t border-zinc-900 flex items-center justify-between">
+                  <span className="text-xs text-zinc-500 font-medium flex items-center gap-1.5">
+                    <Clock className="w-3.5 h-3.5 text-[#E2B857]" />
                     {service.duration}
                   </span>
-                </div>
 
-                <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
-                  {service.tagline}
-                </p>
-
-                {/* Highlights List */}
-                <div className="space-y-2 mb-8 pt-4 border-t border-zinc-800">
-                  {service.highlights.map((h, i) => (
-                    <div key={i} className="flex items-start gap-2.5 text-xs text-zinc-300">
-                      <Check className="w-3.5 h-3.5 text-[#E2B857] shrink-0 mt-0.5" />
-                      <span>{h}</span>
-                    </div>
-                  ))}
+                  <button
+                    type="button"
+                    onClick={() => handleSelect(service.name)}
+                    className="text-xs font-bold text-[#E2B857] hover:text-[#F3D78E] inline-flex items-center gap-1.5 transition-colors cursor-pointer"
+                  >
+                    <span>Reserve Look</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                  </button>
                 </div>
               </div>
-
-              {/* Standardized Button on Every Card */}
-              <button
-                onClick={() => handleSelectService(service.name)}
-                className={`w-full py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${
-                  selectedService === service.name
-                    ? "bg-gradient-to-r from-[#B88B35] to-[#E2B857] text-zinc-950 shadow-md"
-                    : "bg-zinc-900 text-white hover:text-[#E2B857] border border-zinc-800 hover:border-[#E2B857]/40"
-                }`}
-              >
-                {selectedService === service.name ? "Selected for Booking ✓" : "Select This Look"}
-              </button>
             </div>
           ))}
-        </div>
-
-        {/* WhatsApp Reservation Suite (Clean Palm Spring Booking Architecture) */}
-        <div
-          id="booking"
-          className="palm-card p-8 sm:p-12 max-w-3xl mx-auto border border-[#E2B857]/30 shadow-2xl"
-        >
-          <div className="text-center mb-10 space-y-2">
-            <span className="gold-tag">Direct WhatsApp Reservation</span>
-            <h3 className="font-serif text-3xl sm:text-4xl font-bold text-white">
-              Reserve Your Date with Zee
-            </h3>
-            <p className="text-zinc-400 text-sm font-light max-w-md mx-auto leading-relaxed">
-              Select your appointment preferences below. It prepares an instant, courteous message sent directly to Zee at <strong className="text-[#E2B857]">0813 894 8285</strong>.
-            </p>
-          </div>
-
-          <div className="space-y-5">
-            {/* Row 1: Chosen Service & Location Type */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-zinc-300 mb-2">
-                  Chosen Look
-                </label>
-                <select
-                  value={selectedService}
-                  onChange={(e) => setSelectedService(e.target.value)}
-                  className="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-zinc-200 focus:outline-none focus:border-[#E2B857]"
-                >
-                  {serviceCatalog.map((s) => (
-                    <option key={s.id} value={s.name} className="bg-zinc-900 text-white">
-                      {s.name} ({s.price})
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-zinc-300 mb-2">
-                  Location Preference
-                </label>
-                <div className="grid grid-cols-2 gap-2">
-                  <button
-                    type="button"
-                    onClick={() => setLocationType("In-Studio (Eyita, Ikorodu)")}
-                    className={`py-3 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
-                      locationType.includes("In-Studio")
-                        ? "bg-gradient-to-r from-[#B88B35] to-[#E2B857] text-zinc-950 font-bold"
-                        : "bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white"
-                    }`}
-                  >
-                    Eyita Studio
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setLocationType("Home / Hotel Callout Service")}
-                    className={`py-3 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
-                      locationType.includes("Home")
-                        ? "bg-gradient-to-r from-[#B88B35] to-[#E2B857] text-zinc-950 font-bold"
-                        : "bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white"
-                    }`}
-                  >
-                    Hotel / Callout
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* Row 2: Date & Time Slot */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-zinc-300 mb-2">
-                  Preferred Date
-                </label>
-                <input
-                  type="date"
-                  value={date}
-                  onChange={(e) => setDate(e.target.value)}
-                  className="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-zinc-200 focus:outline-none focus:border-[#E2B857]"
-                />
-              </div>
-
-              <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-zinc-300 mb-2">
-                  Preferred Time Slot
-                </label>
-                <select
-                  value={timeSlot}
-                  onChange={(e) => setTimeSlot(e.target.value)}
-                  className="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-zinc-200 focus:outline-none focus:border-[#E2B857]"
-                >
-                  <option value="Sunrise Callout (6:00 AM - 8:00 AM)" className="bg-zinc-900 text-white">
-                    Sunrise Callout (6:00 AM - 8:00 AM) • Weddings
-                  </option>
-                  <option value="Morning (8:00 AM - 11:00 AM)" className="bg-zinc-900 text-white">
-                    Morning (8:00 AM - 11:00 AM)
-                  </option>
-                  <option value="Afternoon (12:00 PM - 3:00 PM)" className="bg-zinc-900 text-white">
-                    Afternoon (12:00 PM - 3:00 PM)
-                  </option>
-                  <option value="Evening (3:30 PM - 6:30 PM)" className="bg-zinc-900 text-white">
-                    Evening (3:30 PM - 6:30 PM)
-                  </option>
-                </select>
-              </div>
-            </div>
-
-            {/* Row 3: Name */}
-            <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-zinc-300 mb-2">
-                Your Name (Optional)
-              </label>
-              <input
-                type="text"
-                placeholder="e.g. Bukola, Queen, or Sarah"
-                value={clientName}
-                onChange={(e) => setClientName(e.target.value)}
-                className="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-zinc-200 focus:outline-none focus:border-[#E2B857]"
-              />
-            </div>
-
-            {/* Two Consistent Action Buttons */}
-            <div className="pt-4 flex flex-col sm:flex-row items-center gap-4">
-              <a
-                href={getWhatsAppBookingLink()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-gold w-full sm:flex-1 text-center"
-              >
-                Book on WhatsApp (0813 894 8285)
-              </a>
-
-              <a
-                href="tel:+2348138948285"
-                className="btn-outline w-full sm:w-auto text-center"
-              >
-                Call Studio
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </section>

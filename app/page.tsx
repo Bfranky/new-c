@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import TheStandard from "@/components/TheStandard";
 import ServicesBooking from "@/components/ServicesBooking";
+import ReservationSection from "@/components/ReservationSection";
 import PortfolioGallery from "@/components/PortfolioGallery";
 import ReviewsSection from "@/components/ReviewsSection";
 import LocationHours from "@/components/LocationHours";
@@ -13,13 +14,14 @@ import ScrollManager from "@/components/ScrollManager";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#090807] text-[#FAF7F2] relative selection:bg-[#E2B857] selection:text-zinc-950">
+    <main className="min-h-screen bg-[#090807] text-[#FAF7F2] relative selection:bg-[#E2B857] selection:text-zinc-950 font-sans">
       <ScrollManager />
       <Navbar />
       <Hero />
       <TheStandard />
-      <PortfolioGallery />
       <ServicesBooking />
+      <ReservationSection />
+      <PortfolioGallery />
       <ReviewsSection />
       <LocationHours />
       <FAQSection />

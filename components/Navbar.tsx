@@ -49,17 +49,20 @@ export default function Navbar() {
 
           {/* Desktop Navigation Links */}
           <nav className="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wide text-zinc-300">
+            <a href="#about" className="hover:text-[#E2B857] transition-colors">
+              About
+            </a>
             <a href="#services" className="hover:text-[#E2B857] transition-colors">
               Services
             </a>
             <a href="#lookbook" className="hover:text-[#E2B857] transition-colors">
               Lookbook
             </a>
-            <a href="#craft" className="hover:text-[#E2B857] transition-colors">
-              The Standard
-            </a>
             <a href="#reviews" className="hover:text-[#E2B857] transition-colors">
               Reviews
+            </a>
+            <a href="#reservation" className="hover:text-[#E2B857] transition-colors">
+              Reserve
             </a>
             <a href="#location" className="hover:text-[#E2B857] transition-colors">
               Studio
@@ -94,6 +97,13 @@ export default function Navbar() {
           <div className="lg:hidden bg-[#0c0a09] border-b border-[#28221B] px-6 py-6 space-y-4 shadow-2xl">
             <div className="flex flex-col space-y-3 text-sm font-medium tracking-wide text-zinc-300">
               <a
+                href="#about"
+                onClick={() => setMobileMenuOpen(false)}
+                className="py-2.5 border-b border-[#221c17] hover:text-[#E2B857]"
+              >
+                About The Standard
+              </a>
+              <a
                 href="#services"
                 onClick={() => setMobileMenuOpen(false)}
                 className="py-2.5 border-b border-[#221c17] hover:text-[#E2B857]"
@@ -101,18 +111,18 @@ export default function Navbar() {
                 Services &amp; Pricing
               </a>
               <a
+                href="#reservation"
+                onClick={() => setMobileMenuOpen(false)}
+                className="py-2.5 border-b border-[#221c17] hover:text-[#E2B857]"
+              >
+                Reserve Your Date
+              </a>
+              <a
                 href="#lookbook"
                 onClick={() => setMobileMenuOpen(false)}
                 className="py-2.5 border-b border-[#221c17] hover:text-[#E2B857]"
               >
                 Melanin Lookbook
-              </a>
-              <a
-                href="#craft"
-                onClick={() => setMobileMenuOpen(false)}
-                className="py-2.5 border-b border-[#221c17] hover:text-[#E2B857]"
-              >
-                The Zee Standard
               </a>
               <a
                 href="#reviews"

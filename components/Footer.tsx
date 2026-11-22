@@ -40,8 +40,13 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#craft" className="hover:text-[#E2B857] transition-colors">
+                <a href="#about" className="hover:text-[#E2B857] transition-colors">
                   The Zee Standard
+                </a>
+              </li>
+              <li>
+                <a href="#reservation" className="hover:text-[#E2B857] transition-colors">
+                  Online Reservations
                 </a>
               </li>
               <li>

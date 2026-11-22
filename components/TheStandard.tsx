@@ -1,93 +1,84 @@
 "use client";
 
 import React from "react";
-import { Sparkles, ShieldCheck, Crown, Flame } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 export default function TheStandard() {
   const stats = [
-    { value: "5.0 ★", label: "GOOGLE RATING" },
-    { value: "100%", label: "MELANIN MATCH ACCURACY" },
+    { value: "5.0 ★", label: "CUSTOMER RATING" },
+    { value: "100%", label: "SKIN-TRUE MATCH" },
     { value: "18hr+", label: "LAGOS-PROOF HOLD" },
   ];
 
-  const standards = [
-    {
-      icon: Sparkles,
-      title: "Skin-True Melanin Matching",
-      description:
-        "Bespoke shade matching for deep, warm, golden, and olive undertones. Guaranteed zero chalky casts, zero ashy undertones, and zero camera flashback.",
-    },
-    {
-      icon: Flame,
-      title: "18-Hour Lagos-Proof Lock",
-      description:
-        "Waterproof and humidity-resistant setting technique that keeps your glam immaculate through intense celebration, dance floors, and tropical weather.",
-    },
-    {
-      icon: Crown,
-      title: "Couture Gele Sculpting",
-      description:
-        "Architectural fan pleating for aso-oke, sego, and auto-gele that stays sturdy and majestic all day with comfortable, gentle temple pressure.",
-    },
-    {
-      icon: ShieldCheck,
-      title: "Private Studio & Callout",
-      description:
-        "Relax in our private, air-conditioned vanity suite in Eyita, Ikorodu, or request an early-morning VIP hotel callout anywhere across Lagos.",
-    },
-  ];
-
   return (
-    <section id="craft" className="py-20 md:py-28 bg-[#090807] border-b border-[#221c17] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-        {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="gold-tag">Our Craft &amp; Standards</span>
-          <h2 className="font-serif text-3xl md:text-5xl font-bold tracking-tight text-white mb-4">
-            The Zee Standard of Melanin Artistry
-          </h2>
-          <p className="text-zinc-400 text-base leading-relaxed font-light">
-            Every session is a bespoke, unhurried transformation tailored to celebrate, elevate, and empower extraordinary African queens.
-          </p>
+    <section id="about" className="py-24 md:py-32 bg-zinc-950/60 border-b border-[#221c17] relative overflow-hidden">
+      {/* Subtle ambient lighting */}
+      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-80 h-80 bg-[#E2B857]/5 rounded-full blur-[120px] pointer-events-none" />
 
-          {/* Stats Row (Palm Spring Inspired) */}
-          <div className="grid grid-cols-3 gap-4 pt-10 border-t border-[#221c17] mt-10">
-            {stats.map((stat, i) => (
-              <div key={i} className="text-center">
-                <p className="font-serif text-2xl sm:text-4xl font-bold text-[#E2B857]">
-                  {stat.value}
-                </p>
-                <p className="text-[10px] sm:text-xs text-zinc-400 tracking-widest uppercase mt-1 font-medium">
-                  {stat.label}
+      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+          {/* Left Column: Authentic African Bridal Portrait */}
+          <div className="lg:col-span-5 relative">
+            <div className="relative h-[380px] sm:h-[460px] md:h-[520px] w-full rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://images.unsplash.com/photo-1785927926340-a81429686417?q=80&w=1200&auto=format&fit=crop"
+                alt="Beauté by Zee - High-Fashion Melanin Artistry"
+                className="w-full h-full object-cover object-top"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#090807]/90 via-transparent to-transparent" />
+
+              {/* Floating Bottom Badge (Palm Spring Standard) */}
+              <div className="absolute bottom-6 left-6 right-6 bg-zinc-950/90 backdrop-blur-md p-5 rounded-2xl border border-zinc-800">
+                <span className="font-serif text-[#E2B857] text-[10px] tracking-[0.25em] uppercase font-bold block mb-1">
+                  THE ZEE EXPERIENCE
+                </span>
+                <p className="text-zinc-300 text-xs leading-relaxed font-light">
+                  Bespoke luxury artistry tailored to celebrate and empower bold African queens.
                 </p>
               </div>
-            ))}
+            </div>
           </div>
-        </div>
 
-        {/* 4 Feature Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {standards.map((item, idx) => {
-            const Icon = item.icon;
-            return (
-              <div
-                key={idx}
-                className="palm-card p-7 flex flex-col justify-between group"
-              >
-                <div>
-                  <div className="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-800 text-[#E2B857] flex items-center justify-center mb-6 group-hover:border-[#E2B857]/40 transition-colors">
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <h3 className="font-serif text-xl font-bold text-white mb-3 group-hover:text-[#E2B857] transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-zinc-400 text-sm leading-relaxed font-light">
-                    {item.description}
+          {/* Right Column: Identity Narrative & Stats */}
+          <div className="lg:col-span-7 space-y-6">
+            <span className="gold-tag">
+              OUR IDENTITY
+            </span>
+
+            <h2 className="font-serif text-3xl md:text-5xl font-bold tracking-tight text-white mb-6">
+              A Melanin Sanctuary in Ikorodu
+            </h2>
+
+            <p className="text-zinc-400 text-base md:text-lg leading-relaxed font-light mb-4">
+              At <strong className="text-white font-semibold">Beauté by Zee</strong>, we believe that makeup is not a mask—it is an intimate ceremony of honoring your natural skin undertones, facial architecture, and cultural royalty.
+            </p>
+
+            <p className="text-zinc-400 text-base md:text-lg leading-relaxed font-light mb-8">
+              Located in the heart of Eyita, Ikorodu, we have crafted a calm, air-conditioned beauty sanctuary. Whether you are walking down the aisle, hosting high-profile owambe celebrations, or stepping into a milestone birthday shoot, Zee guarantees zero grey cast, zero chalky flashback, and 18-hour sweat resistance.
+            </p>
+
+            {/* 3 Stats (Palm Spring Standard) */}
+            <div className="grid grid-cols-3 gap-6 pt-6 border-t border-zinc-900 pb-2">
+              {stats.map((stat, i) => (
+                <div key={i}>
+                  <p className="font-serif text-2xl sm:text-4xl font-bold text-[#E2B857]">
+                    {stat.value}
+                  </p>
+                  <p className="text-[10px] tracking-widest text-zinc-500 uppercase mt-1 font-semibold">
+                    {stat.label}
                   </p>
                 </div>
-              </div>
-            );
-          })}
+              ))}
+            </div>
+
+            <div className="pt-4">
+              <a href="#services" className="btn-gold inline-flex">
+                Explore Our Services
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

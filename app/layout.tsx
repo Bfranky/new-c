@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     locale: "en_NG",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1786529743690-93a4547bc26c?q=80&w=1200",
+        url: "https://images.unsplash.com/photo-1632948056627-41482f69c38c?q=80&w=1200",
         width: 1200,
         height: 630,
         alt: "Beauté by Zee - Luxury African Bridal Makeup",
@@ -48,7 +48,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "BeautySalon",
     "name": "beautebyzee_ Makeup Artist in Ikorodu",
-    "image": "https://images.unsplash.com/photo-1786529743690-93a4547bc26c",
+    "image": "https://images.unsplash.com/photo-1632948056627-41482f69c38c",
     "telephone": "+2348138948285",
     "address": {
       "@type": "PostalAddress",
@@ -101,7 +101,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen bg-[#0B0908] text-[#FAF7F2] font-sans selection:bg-[#C59A3F] selection:text-[#0B0908] antialiased">
+      <body className="min-h-screen bg-[#090807] text-[#FAF7F2] font-sans selection:bg-[#E2B857] selection:text-zinc-950 antialiased">
         {children}
       </body>
     </html>

@@ -51,8 +51,8 @@ export default function TheStandard() {
                 className="gold-card p-7 rounded-3xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1.5 shadow-lg"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-[#241F1A] text-[#DFC07A] border border-[#C59A3F]/30 flex items-center justify-center mb-6 group-hover:bg-[#C59A3F] group-hover:text-[#0B0908] transition-all duration-300 shrink-0 shadow-inner">
-                    <Icon className="w-6 h-6 shrink-0" />
+                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#28211A] to-[#14100D] text-[#DFC07A] border border-[#C59A3F]/40 flex items-center justify-center mb-6 group-hover:border-[#DFC07A] group-hover:shadow-[0_0_24px_rgba(197,154,63,0.35)] transition-all duration-300 shrink-0 shadow-md">
+                    <Icon className="w-6 h-6 text-[#DFC07A] group-hover:scale-110 transition-transform duration-300 shrink-0 stroke-[2]" />
                   </div>
                   <h3 className="font-serif text-xl font-bold text-[#FAF7F2] mb-3 group-hover:text-[#DFC07A] transition-colors">
                     {item.title}

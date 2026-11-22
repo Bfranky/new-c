@@ -232,7 +232,7 @@ export default function PortfolioGallery() {
                       rel="noopener noreferrer"
                       className="btn-luxury-primary w-full"
                     >
-                      <MessageCircle className="w-4 h-4 fill-[#0B0908] shrink-0" />
+                      <MessageCircle className="w-4 h-4 text-[#0A0806] shrink-0 stroke-[2.2]" />
                       <span>Request This Look on WhatsApp</span>
                     </a>
                   </div>

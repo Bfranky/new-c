@@ -97,7 +97,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="btn-nav-whatsapp"
             >
-              <MessageCircle className="w-4 h-4 fill-[#0B0908] shrink-0" />
+              <MessageCircle className="w-4 h-4 text-[#0A0806] shrink-0 stroke-[2.2]" />
               <span>Book on WhatsApp</span>
             </a>
           </div>
@@ -162,7 +162,7 @@ export default function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
                 className="btn-luxury-primary w-full"
               >
-                <MessageCircle className="w-4 h-4 fill-[#0B0908] shrink-0" />
+                <MessageCircle className="w-4 h-4 text-[#0A0806] shrink-0 stroke-[2.2]" />
                 <span>Chat Directly on WhatsApp</span>
               </a>
             </div>

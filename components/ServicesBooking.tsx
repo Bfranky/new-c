@@ -366,7 +366,7 @@ export default function ServicesBooking() {
                 rel="noopener noreferrer"
                 className="btn-luxury-primary w-full flex-1"
               >
-                <MessageCircle className="w-4 h-4 fill-[#0B0908] shrink-0" />
+                <MessageCircle className="w-4 h-4 text-[#0A0806] shrink-0 stroke-[2.2]" />
                 <span>Book on WhatsApp (0813 894 8285)</span>
               </a>
 

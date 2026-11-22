@@ -20,10 +20,10 @@ export default function StickyMobileBar() {
           href="https://wa.me/2348138948285?text=Hello%20Zee!%20I%20would%20like%20to%20book%20a%20makeup%20session."
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-[2] h-12 inline-flex items-center justify-center gap-2 btn-gold-glow text-[#0B0908] px-4 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg active:scale-95 transition-all shrink-0"
+          className="flex-[2] h-12 inline-flex items-center justify-center gap-2 btn-luxury-primary px-4 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg active:scale-95 transition-all shrink-0"
           aria-label="Book on WhatsApp"
         >
-          <MessageCircle className="w-4 h-4 fill-[#0B0908] shrink-0" />
+          <MessageCircle className="w-4 h-4 text-[#0A0806] shrink-0 stroke-[2.2]" />
           <span>Book on WhatsApp</span>
         </a>
       </div>

@@ -53,17 +53,18 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 pt-2 w-full sm:w-auto">
               <a
                 href="#booking"
-                className="btn-luxury-primary w-full sm:w-auto"
+                className="btn-luxury-primary w-full sm:w-auto group"
               >
-                <Calendar className="w-4 h-4 fill-[#0B0908] shrink-0" />
+                <Calendar className="w-4 h-4 text-[#0A0806] shrink-0 stroke-[2.2]" />
                 <span>Reserve Your Date</span>
-                <ArrowRight className="w-4 h-4 shrink-0" />
+                <ArrowRight className="w-4 h-4 text-[#0A0806] shrink-0 stroke-[2.2] group-hover:translate-x-1 transition-transform" />
               </a>
 
               <a
                 href="#lookbook"
-                className="btn-luxury-secondary w-full sm:w-auto"
+                className="btn-luxury-secondary w-full sm:w-auto group"
               >
+                <Sparkles className="w-4 h-4 text-[#DFC07A] shrink-0 group-hover:rotate-12 transition-transform" />
                 <span>View The Lookbook</span>
               </a>
             </div>
@@ -84,7 +85,7 @@ export default function Hero() {
           </div>
 
           {/* Right Column: Full-Color Haute African Bridal Portrait */}
-          <div className="lg:col-span-5 relative w-full">
+          <div className="col-span-1 lg:col-span-5 relative w-full">
             <div className="relative mx-auto max-w-sm sm:max-w-md lg:max-w-none">
               {/* Outer decorative golden accent frame */}
               <div className="absolute inset-0 translate-x-3 translate-y-3 sm:translate-x-4 sm:translate-y-4 border border-[#C59A3F]/40 rounded-3xl -z-10" />

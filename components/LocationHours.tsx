@@ -77,7 +77,7 @@ export default function LocationHours() {
                 rel="noopener noreferrer"
                 className="btn-luxury-primary w-full sm:w-auto"
               >
-                <Navigation className="w-4 h-4 fill-[#0B0908] shrink-0" />
+                <Navigation className="w-4 h-4 text-[#0A0806] shrink-0 stroke-[2.2]" />
                 <span>Open in Google Maps</span>
               </a>
 
@@ -144,7 +144,7 @@ export default function LocationHours() {
                   rel="noopener noreferrer"
                   className="btn-luxury-primary w-full"
                 >
-                  <MessageCircle className="w-4 h-4 fill-[#0B0908] shrink-0" />
+                  <MessageCircle className="w-4 h-4 text-[#0A0806] shrink-0 stroke-[2.2]" />
                   <span>Inquire Callout Travel Fee</span>
                 </a>
               </div>

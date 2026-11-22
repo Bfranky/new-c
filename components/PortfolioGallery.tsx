@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Sparkles, MessageCircle, Eye, X, ArrowUpRight } from "lucide-react";
+import { X, ArrowUpRight } from "lucide-react";
 
 interface LookItem {
   id: number;
@@ -89,23 +89,21 @@ export default function PortfolioGallery() {
       : portfolioLooks.filter((look) => look.category === filter);
 
   return (
-    <section id="lookbook" className="py-20 sm:py-28 bg-[#0B0908] border-b border-[#241F1A] scroll-mt-28 relative">
+    <section id="lookbook" className="py-20 md:py-28 bg-[#0c0a09] border-b border-[#221c17] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
-          <div className="space-y-3 max-w-xl">
-            <span className="text-2xs uppercase tracking-ultra text-[#DFC07A] font-bold">
-              The Melanin Lookbook
-            </span>
-            <h2 className="font-serif text-4xl sm:text-5xl font-bold text-[#FAF7F2]">
-              Bold, Radiant & Unapologetic.
+          <div className="max-w-xl">
+            <span className="gold-tag">The Melanin Lookbook</span>
+            <h2 className="font-serif text-3xl md:text-5xl font-bold tracking-tight text-white mb-3">
+              Bold, Radiant &amp; Unapologetic
             </h2>
-            <p className="text-sm text-[#A8A199] font-light leading-relaxed">
+            <p className="text-zinc-400 text-base leading-relaxed font-light">
               Crafted exclusively for rich African complexions. Zero grey casts, zero heavy masks — just pure, regal radiance.
             </p>
           </div>
 
-          {/* Filter Pills */}
+          {/* Filter Pills (Palm Spring Standard) */}
           <div className="flex flex-wrap gap-2">
             {[
               { id: "all", label: "All Looks" },
@@ -117,10 +115,10 @@ export default function PortfolioGallery() {
               <button
                 key={tab.id}
                 onClick={() => setFilter(tab.id)}
-                className={`px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
+                className={`px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 cursor-pointer ${
                   filter === tab.id
-                    ? "btn-gold-glow text-[#0B0908] font-bold"
-                    : "bg-[#171310] text-[#B5ABA0] border border-[#241F1A] hover:border-[#C59A3F]/50 hover:text-white"
+                    ? "bg-gradient-to-r from-[#B88B35] to-[#E2B857] text-zinc-950 shadow-md"
+                    : "bg-zinc-900 text-zinc-400 hover:text-white border border-zinc-800 hover:border-[#E2B857]/40"
                 }`}
               >
                 {tab.label}
@@ -135,7 +133,7 @@ export default function PortfolioGallery() {
             <div
               key={item.id}
               onClick={() => setActiveModalLook(item)}
-              className="group relative rounded-3xl overflow-hidden bg-[#141110] border border-[#C59A3F]/25 cursor-pointer shadow-xl hover:border-[#C59A3F]/70 transition-all duration-500 hover:-translate-y-1.5"
+              className="group relative rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800 hover:border-[#E2B857]/50 cursor-pointer transition-all duration-500 hover:-translate-y-1.5 shadow-lg"
             >
               {/* Image Container with 4:5 Aspect Ratio */}
               <div className="aspect-[4/5] overflow-hidden relative">
@@ -143,33 +141,28 @@ export default function PortfolioGallery() {
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover object-top group-hover:scale-108 transition-transform duration-700"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0B0908]/95 via-[#0B0908]/30 to-transparent opacity-85 group-hover:opacity-95 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#090807]/95 via-transparent to-transparent opacity-85 group-hover:opacity-95 transition-opacity" />
 
                 {/* Top Badge */}
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-[#141110]/90 backdrop-blur-md text-[#DFC07A] text-3xs font-bold uppercase tracking-wider rounded-full border border-[#C59A3F]/35 shadow-md">
+                  <span className="px-3 py-1 bg-zinc-950/90 backdrop-blur-md text-[#E2B857] text-[10px] font-semibold uppercase tracking-wider rounded-full border border-zinc-800">
                     {item.tag}
                   </span>
                 </div>
 
-                {/* Inspect Icon on Hover */}
-                <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-[#0B0908]/80 backdrop-blur-md text-[#DFC07A] border border-[#C59A3F]/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <Eye className="w-4 h-4 shrink-0" />
-                </div>
-
                 {/* Bottom Title & Action */}
                 <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <h3 className="font-serif text-lg font-bold leading-tight text-[#FAF7F2] group-hover:text-[#DFC07A] transition-colors">
+                  <h3 className="font-serif text-lg font-bold leading-tight text-white group-hover:text-[#E2B857] transition-colors">
                     {item.title}
                   </h3>
                   <div className="flex items-center justify-between mt-2 pt-2 border-t border-white/10">
-                    <span className="text-2xs text-[#A8A199] line-clamp-1 font-light">
+                    <span className="text-xs text-zinc-400 line-clamp-1 font-light">
                       {item.desc}
                     </span>
-                    <ArrowUpRight className="w-4 h-4 text-[#DFC07A] shrink-0 ml-1 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    <ArrowUpRight className="w-4 h-4 text-[#E2B857] shrink-0 ml-1 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </div>
                 </div>
               </div>
@@ -180,11 +173,10 @@ export default function PortfolioGallery() {
         {/* Modal Lightbox */}
         {activeModalLook && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md">
-            <div className="bg-[#141110] rounded-3xl max-w-2xl w-full overflow-hidden border border-[#C59A3F]/40 shadow-2xl relative">
-              {/* Close Button */}
+            <div className="bg-zinc-950 rounded-2xl max-w-2xl w-full overflow-hidden border border-zinc-800 shadow-2xl relative">
               <button
                 onClick={() => setActiveModalLook(null)}
-                className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-[#0B0908] text-[#DFC07A] border border-[#C59A3F]/40 flex items-center justify-center hover:bg-[#C59A3F] hover:text-[#0B0908] transition-colors cursor-pointer"
+                className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-zinc-900 text-zinc-300 border border-zinc-700 flex items-center justify-center hover:text-white transition-colors cursor-pointer"
                 aria-label="Close lookbook modal"
               >
                 <X className="w-4 h-4 shrink-0" />
@@ -202,24 +194,18 @@ export default function PortfolioGallery() {
 
                 <div className="p-7 sm:p-8 flex flex-col justify-between">
                   <div className="space-y-4">
-                    <span className="inline-block px-3 py-1 bg-[#1F1A16] border border-[#C59A3F]/35 text-[#DFC07A] text-3xs font-bold uppercase tracking-wider rounded-full">
+                    <span className="inline-block px-3 py-1 bg-zinc-900 border border-zinc-800 text-[#E2B857] text-xs font-semibold uppercase tracking-wider rounded-full">
                       {activeModalLook.tag}
                     </span>
-                    <h3 className="font-serif text-2xl font-bold text-[#FAF7F2]">
+                    <h3 className="font-serif text-2xl font-bold text-white">
                       {activeModalLook.title}
                     </h3>
-                    <p className="text-xs text-[#C8C0B5] font-light leading-relaxed">
+                    <p className="text-zinc-400 text-sm font-light leading-relaxed">
                       {activeModalLook.desc}
                     </p>
-                    <div className="pt-3 border-t border-[#241F1A] space-y-2 text-xs text-[#FAF7F2]">
-                      <div className="flex items-center gap-2">
-                        <Sparkles className="w-3.5 h-3.5 text-[#DFC07A] shrink-0" />
-                        <span>Zero flashback under flash photography</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <Sparkles className="w-3.5 h-3.5 text-[#DFC07A] shrink-0" />
-                        <span>Sweat-resistant 18-hour hold setting lock</span>
-                      </div>
+                    <div className="pt-3 border-t border-zinc-800 space-y-2 text-xs text-zinc-300">
+                      <p>✓ Zero flashback under bright photography</p>
+                      <p>✓ Sweat-resistant 18-hour hold setting lock</p>
                     </div>
                   </div>
 
@@ -230,10 +216,9 @@ export default function PortfolioGallery() {
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn-luxury-primary w-full"
+                      className="btn-gold w-full text-center"
                     >
-                      <MessageCircle className="w-4 h-4 text-[#0A0806] shrink-0 stroke-[2.2]" />
-                      <span>Request This Look on WhatsApp</span>
+                      Request This Look on WhatsApp
                     </a>
                   </div>
                 </div>

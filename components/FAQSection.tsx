@@ -17,7 +17,7 @@ export default function FAQSection() {
     },
     {
       q: "Will my makeup flashback or look grey in professional photography?",
-      a: "Never. We specialize exclusively in rich melanin complexions. Every foundation, concealer, and powder formula is color-tested under high-powered flash and camera lighting to guarantee a flawless, skin-like golden radiance.",
+      a: "Never. We specialize exclusively in rich melanin complexions. Every foundation, concealer, and setting formula is color-tested under high-powered flash and camera lighting to guarantee a flawless, skin-like golden radiance.",
     },
     {
       q: "What is included with the Luxury Royal Bridal Glam?",
@@ -30,14 +30,12 @@ export default function FAQSection() {
   ];
 
   return (
-    <section id="faqs" className="py-20 sm:py-28 bg-[#0B0908] border-b border-[#241F1A] scroll-mt-28 relative">
+    <section id="faqs" className="py-20 md:py-28 bg-[#0c0a09] border-b border-[#221c17] relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
-        <div className="text-center space-y-3 mb-14">
-          <span className="text-2xs uppercase tracking-ultra text-[#DFC07A] font-bold">
-            Got Questions?
-          </span>
-          <h2 className="font-serif text-4xl sm:text-5xl font-bold text-[#FAF7F2]">
-            Frequently Asked
+        <div className="text-center mb-14">
+          <span className="gold-tag">Got Questions?</span>
+          <h2 className="font-serif text-3xl md:text-5xl font-bold tracking-tight text-white">
+            Frequently Asked Questions
           </h2>
         </div>
 
@@ -47,29 +45,27 @@ export default function FAQSection() {
             return (
               <div
                 key={idx}
-                className="gold-card rounded-2xl overflow-hidden transition-all duration-300 shadow-md"
+                className="palm-card overflow-hidden transition-all duration-300"
               >
                 <button
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
                   className="w-full p-6 sm:p-7 text-left flex items-center justify-between gap-4 cursor-pointer hover:bg-white/5 transition-colors"
                 >
-                  <span className="font-serif text-xl sm:text-2xl font-bold text-[#FAF7F2]">
+                  <span className="font-serif text-lg sm:text-xl font-bold text-white">
                     {faq.q}
                   </span>
                   <div
-                    className={`w-9 h-9 rounded-full border flex items-center justify-center shrink-0 transition-all duration-300 ${
-                      isOpen
-                        ? "rotate-180 btn-gold-glow text-[#0B0908] border-transparent"
-                        : "bg-[#191512] text-[#DFC07A] border-[#C59A3F]/35"
+                    className={`w-8 h-8 rounded-full border border-zinc-700 flex items-center justify-center shrink-0 transition-transform duration-300 ${
+                      isOpen ? "rotate-180 bg-[#E2B857] text-zinc-950 border-transparent" : "text-zinc-400"
                     }`}
                   >
-                    <ChevronDown className="w-4 h-4 shrink-0" />
+                    <ChevronDown className="w-4 h-4" />
                   </div>
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-7 sm:px-7 text-xs sm:text-sm text-[#C8C0B5] font-light leading-relaxed border-t border-[#241F1A] pt-5">
+                  <div className="px-6 pb-7 sm:px-7 text-sm text-zinc-400 font-light leading-relaxed border-t border-zinc-800 pt-5">
                     {faq.a}
                   </div>
                 )}

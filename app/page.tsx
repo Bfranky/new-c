@@ -9,12 +9,11 @@ import LocationHours from "@/components/LocationHours";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import StickyMobileBar from "@/components/StickyMobileBar";
 import ScrollManager from "@/components/ScrollManager";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#0B0908] text-[#FAF7F2] relative">
+    <main className="min-h-screen bg-[#090807] text-[#FAF7F2] relative selection:bg-[#E2B857] selection:text-zinc-950">
       <ScrollManager />
       <Navbar />
       <Hero />
@@ -26,7 +25,6 @@ export default function Home() {
       <FAQSection />
       <Footer />
       <FloatingWhatsApp />
-      <StickyMobileBar />
     </main>
   );
 }

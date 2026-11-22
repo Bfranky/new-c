@@ -32,64 +32,62 @@ export default function ReviewsSection() {
   ];
 
   return (
-    <section id="reviews" className="py-20 sm:py-28 bg-[#0B0908] border-b border-[#241F1A] scroll-mt-28 relative">
+    <section id="reviews" className="py-20 md:py-28 bg-[#0c0a09] border-b border-[#221c17] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         {/* Header */}
-        <div className="text-center max-w-xl mx-auto space-y-3 mb-14">
-          <span className="text-2xs uppercase tracking-ultra text-[#DFC07A] font-bold">
-            100% 5-Star Reputation
-          </span>
-          <h2 className="font-serif text-4xl sm:text-5xl font-bold text-[#FAF7F2]">
+        <div className="text-center max-w-xl mx-auto mb-14 space-y-3">
+          <span className="gold-tag">Real Bride Experiences</span>
+          <h2 className="font-serif text-3xl md:text-5xl font-bold tracking-tight text-white mb-2">
             Words From Our Queens
           </h2>
-          <p className="text-sm text-[#A8A199] font-light leading-relaxed">
+          <p className="text-zinc-400 text-base leading-relaxed font-light">
             Every review is unedited from our Google Business Profile in Eyita, Ikorodu.
           </p>
 
           <div className="flex items-center justify-center gap-2 pt-2">
             <div className="flex items-center gap-1">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-[#C59A3F] text-[#C59A3F] shrink-0" />
+                <Star key={i} className="w-4 h-4 fill-[#E2B857] text-[#E2B857] shrink-0" />
               ))}
             </div>
-            <span className="text-xs font-bold text-[#DFC07A] ml-1">5.0 / 5.0 Google Rating</span>
+            <span className="text-sm font-semibold text-[#E2B857] ml-1">5.0 / 5.0 Google Rating</span>
           </div>
         </div>
 
         {/* Minimalist Editorial Review Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {reviews.map((rev, idx) => (
             <div
               key={idx}
-              className="gold-card rounded-3xl p-8 sm:p-9 transition-all duration-300 flex flex-col justify-between shadow-xl hover:-translate-y-1"
+              className="palm-card p-8 sm:p-9 flex flex-col justify-between"
             >
               <div>
-                <div className="flex items-center justify-between gap-2 mb-5">
-                  <span className="text-3xs font-bold uppercase tracking-wider px-3 py-1 bg-[#241F1A] border border-[#C59A3F]/30 rounded-full text-[#DFC07A]">
+                <div className="flex items-center justify-between gap-2 mb-6">
+                  <span className="text-xs font-semibold uppercase tracking-wider px-3 py-1 bg-zinc-900 border border-zinc-800 rounded-full text-[#E2B857]">
                     {rev.tag}
                   </span>
                   <div className="flex items-center gap-1">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3.5 h-3.5 fill-[#C59A3F] text-[#C59A3F] shrink-0" />
+                      <Star key={i} className="w-3.5 h-3.5 fill-[#E2B857] text-[#E2B857] shrink-0" />
                     ))}
                   </div>
                 </div>
 
-                <p className="font-serif text-xl sm:text-2xl text-[#FAF7F2] leading-relaxed italic mb-8">
+                <p className="font-serif text-xl sm:text-2xl text-zinc-100 leading-relaxed italic mb-8">
                   &ldquo;{rev.text}&rdquo;
                 </p>
               </div>
 
-              <div className="flex items-center justify-between pt-5 border-t border-[#241F1A]">
+              <div className="flex items-center justify-between pt-5 border-t border-zinc-800">
                 <div>
-                  <h4 className="font-bold text-sm text-[#FAF7F2]">
+                  <h4 className="font-bold text-sm text-white">
                     {rev.author}
                   </h4>
-                  <p className="text-xs text-[#8F877E]">
+                  <p className="text-xs text-zinc-400">
                     {rev.role}
                   </p>
                 </div>
-                <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950/60 border border-emerald-500/30 text-emerald-400 text-3xs font-bold uppercase tracking-wider shrink-0">
+                <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950/60 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-wider shrink-0">
                   <CheckCircle className="w-3.5 h-3.5 shrink-0" />
                   <span>Google Verified</span>
                 </div>
